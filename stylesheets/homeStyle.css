@@ -91,6 +91,13 @@
   object-fit: fill;
  }
  
+ #insta, #linkedin{
+  color: #043565;
+}
+
+#insta:hover, #linkedin:hover{
+  color: #A8577E;
+}
 
 
 

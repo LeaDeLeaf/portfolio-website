@@ -60,3 +60,11 @@
     padding: 5%;
     margin-top: 3%;
   }
+
+  #insta, #linkedin{
+    color: #043565;
+  }
+  
+  #insta:hover, #linkedin:hover{
+    color: #A8577E;
+  }

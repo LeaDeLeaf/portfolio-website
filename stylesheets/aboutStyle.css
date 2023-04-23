@@ -87,3 +87,11 @@
     color: #F5D7E3;
     line-height: 2em;
   }
+
+  #insta, #linkedin{
+    color: #043565;
+  }
+  
+  #insta:hover, #linkedin:hover{
+    color: #A8577E;
+  }

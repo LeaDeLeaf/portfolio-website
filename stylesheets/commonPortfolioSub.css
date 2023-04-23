@@ -69,3 +69,11 @@
     position: absolute;
     margin-top: 37%;
   }
+
+  #insta, #linkedin{
+    color: #043565;
+  }
+  
+  #insta:hover, #linkedin:hover{
+    color: #A8577E;
+  }

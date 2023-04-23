@@ -91,3 +91,11 @@
    font-weight: 500;
    font-size: 1.25em;
   }
+
+#insta, #linkedin{
+  color: #043565;
+}
+
+#insta:hover, #linkedin:hover{
+  color: #A8577E;
+}
