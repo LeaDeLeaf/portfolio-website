@@ -51,6 +51,7 @@
     border: 4px;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    border-radius: 25px;
   }
   
   #navbarText .nav-link:hover::after {
