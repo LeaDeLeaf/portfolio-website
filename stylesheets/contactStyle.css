@@ -26,14 +26,42 @@
 
   #navbar .nav-link{
     color: #043565;
+    display: inline-block;
+    position: relative;
   }
 
   #navbar .nav-link:hover{
-    color: #A8577E;
+    color: #F5D7E3;
   }
 
   #navbarText{
     margin-bottom: 2%;
+  }
+
+  #navbarText .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 101%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #A8577E;
+    border-radius: 5%;
+    border: 4px;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+  }
+  
+  #navbarText .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .navbar-nav > li{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   #logo{
@@ -67,10 +95,36 @@
   }
 
   #submitBtn{
-    background-color: #F5D7E3;
-    color:#A8577E;
+    /* background-color: #F5D7E3; */
+    color: #F5D7E3;
     font-weight: 500;
     font-size: 1.25em;
+    border: 2px solid #F5D7E3; 
+    height: 4em;
+    padding: 2.4%; 
+    width: 28.5em;
+    transition: ease-in-out .35s;
+  }
+
+  #submitBtn::after{
+    position: absolute;
+    content: "";
+    top: 78%;
+    left: 51.85%;
+    width: 0;
+    height: 14%;
+    background-color: #F5D7E3;
+    z-index: -1;
+    border-radius: 5px;
+    transition: ease-in-out .35s;
+  }
+
+  #submitBtn:hover{
+    color: #A8577E;;
+  }
+
+  #submitBtn:hover::after{
+    width: 43.15%;
   }
 
   .form-control::placeholder {

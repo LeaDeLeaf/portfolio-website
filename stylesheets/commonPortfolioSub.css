@@ -26,14 +26,41 @@
 
   #navbar .nav-link{
     color: #043565;
+    display: inline-block;
+    position: relative;
   }
 
   #navbar .nav-link:hover{
-    color: #A8577E;
+    color: #F5D7E3;
   }
 
   #navbarText{
     margin-bottom: 2%;
+  }
+
+  #navbarText .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 101.75%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0em;
+    background-color: #A8577E;
+    border-radius: 5%;
+    border: 4px;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #navbarText .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .navbar-nav > li{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   #logo{
