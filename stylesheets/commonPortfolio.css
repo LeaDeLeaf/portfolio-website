@@ -108,6 +108,9 @@
 
   #work-list{
     gap: 20px;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .work{
