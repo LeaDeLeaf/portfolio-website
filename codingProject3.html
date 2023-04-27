@@ -17,13 +17,13 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
         <!--Reference to external css file-->
-        <link rel="stylesheet" href="stylesheets/aboutStyle.css"> <!--Take note that the external css file do not need the style tag-->
+        <link rel="stylesheet" href="stylesheets/commonPortfolioSub.css"> <!--Take note that the external css file do not need the style tag-->
 
         <!--Reference to external css file only if it hit a certain size-->
         <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
         <title>
-            About Me - Lea Gabay
+            Coding Project 2 - Lea Gabay
         </title>
 
         <style>
@@ -33,7 +33,7 @@
             width: 100%;
             height: 4px;
             bottom: 0;
-            left: 0;
+            left: 0.25em;
             background-color:#043565;
             border-radius: 25px;
             border: 2px;
@@ -46,7 +46,6 @@
 
     </head>
     <body>
-      <div>
           <!-- Navbar -->
           <nav class="navbar navbar-expand-lg shadow-5-strong" id="navbar">
             <div class="container-fluid">
@@ -63,10 +62,10 @@
                     <a class="nav-link" href="homepage.html"><h4>Home</h4></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="about.html" id="currentPg"><h4>About</h4></a>
+                    <a class="nav-link" href="about.html"><h4>About</h4></a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="portfolio.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" aria-current="page" href="portfolio.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="currentPg">
                       <h4>Portfolio</h4>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
@@ -85,119 +84,52 @@
             </div>
         </nav>
 
-        <!--My Story-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6">
-                    <span id="heading">My Story</span>
-                    <p style="margin-top: 5%;">Hello! My name is Gabay Lea Louise<br>Aventurado.</p>
-
-                    <p style="margin-top: 14%;">I am UI/UX designer with experience in<br>
-                        different coding languages such as<br>
-                        Python, Java, HTML / CSS, Android<br>
-                        Development and Unity.</p>
-                        
-                    <p style="margin-top: 30%;">Self-motivated and passionate about<br>
-                        IT, I strive to hone my skills further<br>
-                        and develop my overall well-being so<br>
-                        that I can use them and help others<br>
-                        around me whenever they require aid.</p>
-                        
-                    <p style="margin-top: 50%;">This website allows me to express my<br>
-                        traits and display my skills creatively<br>
-                        and flexibly for others to see.</p>
-
-                </div>
-                <div class="col-6">
-                    <img src="images/myPic.svg" alt="Lea Gabay Picture" id="myPic">
-                </div>
-            </div>
+        <!-- Dark rectangle-->
+        <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 50em; z-index: 2; 
+        height: 19.5em; position: absolute; margin-left: 8%;"></div>
+        
+        <!--Pink rectangle-->
+        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 28em; 
+        position: absolute; margin-left: 11%; margin-top: 5%;">
         </div>
 
-        <!--Skills & Achievements-->
-          <!--Pink rectangle behind skills section-->
-          <div class="container-fluid" style="background-color: #F4A5AE; width: 75%; z-index: 1; height: 80%; position: absolute;
-          margin-left: 13%; margin-top: 74%;">
-          </div>
-  
-          <!--Dark rectangle behind skills heading-->
-          <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 72em; z-index: 2; height: 20%; position: absolute;
-          margin-left: 8%; margin-top: 69%;"></div>
-  
-          <h1 style="color: #F5D7E3; z-index: 3; margin-left: 13%; position: absolute; margin-top: 71.5%; font-style: italic; font-size: 3em;">Skills</h1>
+        <!--Heading-->
+            <span style="color: #F5D7E3; z-index: 3; position: absolute; font-style: italic;
+            font-size: 3.5em; font-weight: 500; margin-left: 12%; margin-top: 3%;">Hotel Review Website</span>
 
-          <!--Dark rectangle behind skills text-->
-          <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 71em; z-index: 2;  height: 80%; position: absolute;
-          margin-left: 18%; margin-top: 82%;"></div>
+            <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
+              Made in NetBeans IDE using HTML,<br>CSS, PHP & JavaScript</p>
 
-          <h1 style="color: #F5D7E3; z-index: 3; margin-left: 23%; position: absolute; margin-top: 85%; font-size: 2em;">
-            Objected-oriented Programming (Python, Java, C#)<br>
-            Web Development(HTML, CSS, JavaScript, PHP)<br>
-            Database Systems (MySQL)<br><br>
+        <!--Image-->
+        <div class="rectangle" style="background-color: grey; width: 30em; height: 60em; z-index: 3; margin-top: 22%; margin-left: 54%; position: absolute;"></div>
 
-            Digital Design (Illustrator, Canva)<br>
-            Digital Imaging (Photoshop)<br>
-            UI / UX Design (XD)<br><br>
+        <!--Description-->
+        <div class="container-fluid" id="description">
+            <p>This web application is made<br>
+            for users to review different hotels<br>
+            featured in the website.<br><br>
+            </p>
+        
+            <p>The users will be able to create &<br>
+                maintain their accounts, view the<br>
+                various hotels to review, & maintain<br>
+                their reviews for each hotel.<br><br>
+            </p>
+                
+            <p>This app is made using NetBeans<br>
+              IDE and allowed me to understand &<br>
+              apply the knowledge of website<br>
+              development and be able to develop<br>
+              a working web application in PHP.<br>
+            </p>
+        </div>
 
-            Basic Knowledge of UNIX Shell Script and Basic computer software<br><br>
-
-            Fluent in English<br>
-            Conversational Proficiency in Tagalog and French<br><br>
-
-          </h1>
-          
-          <!--Pink rectangle behind awards section-->
-          <div class="container-fluid" style="background-color: #F4A5AE; width: 75%; z-index: 1; height: 68em; position: absolute;
-          margin-left: 13%; margin-top: 133em;">
-          </div>
-  
-          <!--Dark rectangle behind awards heading-->
-          <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 71em; z-index: 2; height: 20%; position: absolute;
-          margin-left: 8%; margin-top: 128em;"></div>
-  
-          <h1 style="color: #F5D7E3; z-index: 3; margin-left: 13%; position: absolute; margin-top: 43.5em; font-style: italic; font-size: 3em;">Awards & Achievements</h1>
-
-          <!--Dark rectangle behind awards text-->
-          <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 72em; z-index: 2;  height: 72em; position: absolute;
-          margin-left: 18%; margin-top: 140em;"></div>
-
-          <h1 style="color: #F5D7E3; z-index: 3; margin-left: 22%; position: absolute; margin-top: 71.5em; font-size: 2em;">
-            2022<br>
-            Lee Foundation Scholarship<br>
-            Shopee Code League Participant<br>
-            Edusave Certificate of Academic Achievement<br>
-            Empowering Girls in Tech Hackathon Participant<br><br>
-
-            Director's Roll of Honour (AY2021 Semester 1 &<br>
-            Semester 2; AY2022 Semester 1 & Semester 2)<br><br>
-
-            2020<br>
-            Edusave Award For Achievement, Good Leadership and Service (EAGLES)<br><br>
-
-            2019<br>
-            MOE History Challenge Participant<br>
-            Outward Bound Course<br>
-            SYF Arts Presentation Certificate of Accomplishment<br><br>
-
-            2018<br>
-            Kelvin Sng Productions' Journalism and Broadcasting Programme<br>
-            Republic Polytechnic's Food Biotechnology Advanced Elective Module<br><br>
-
-            Lower Secondary Leadership Camp (AY2018, AY2017)<br><br>
-
-            2017<br>
-            Act3 Drama Academy's Creative Drama Programme<br>
-            Edusave Good Progress Award<br>
-
-
-          </h1>  
-
-
+     <!-- Footer -->
         <!-- Footer -->
         <div class="container-fluid">
           <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 py-5 my-5 border-top border-bottom border-2 border-white">
             <div class="col mb-2">
-              <p style="text-align: start;"><h5 style="margin-top: 12em;">©2023 Lea Gabay</h5></p>
+              <p style="text-align: start; margin-top: 15em;"><h5>©2023 Lea Gabay</h5></p>
             </div>
         
         
@@ -227,7 +159,7 @@
           </footer>
         </div>
 
-        <!-- Background -->
+        <!--Background -->
         <div class="bgclass">
           <div class="gradient"></div> 
         </div>
