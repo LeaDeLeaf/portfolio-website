@@ -8,6 +8,10 @@
     bottom: 0;
 }
   
+body{
+  overflow-x: hidden;
+}
+
   .gradient {
     background-image: linear-gradient(#F4A5AE, #A8577E,#A8577E,#A8577E, #043565);
     width: 100%;
