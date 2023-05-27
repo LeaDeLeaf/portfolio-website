@@ -244,23 +244,229 @@ tippy('#exercisetracker6', {
 
 // Graphics Design Section
 // Castle On Ice
+tippy('#castleonice1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Castle Original Picture</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
+tippy('#castleonice2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Ice Original Picture</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#castleonice3', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Combined picture of both elements in the previous 2 pictures</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
 
 // Chinese Culture Event Poster
+tippy('#chineseposter1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Chinese Culture Event Moodboard</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
+tippy('#chineseposter2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Chinese Culture Event Poster</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
 
 // Travel Magazine Design
+tippy('#travelmagazine1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Travel Magazine Moodboard</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
+tippy('#travelmagazine2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Travel Magazine</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
 
 // Travel Website Prototype
+tippy('#travelproto1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Home Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
+tippy('#travelproto2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Moodboard</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto3', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>About Us Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto4', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Explore Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto5', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Products Page - Hotel</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto6', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Products Page - Attractions</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto7', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Products Page - Flights</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto8', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Booking Page - Hotel</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto9', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Booking Page - Attractions</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto10', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Booking Page - Flights</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto11', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Confirmation Booking Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto12', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Make Payment Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto13', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Thank you Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#travelproto14', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Explore Page - Successful Search</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
 
 // Portfolio Prototype
+tippy('#portfolioprototype1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Home Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
+tippy('#portfolioprototype2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Contact Us Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#portfolioprototype3', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Portfolio Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#portfolioprototype4', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>About Us Page</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#portfolioprototype5', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Moodboard</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#portfolioprototype6', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Typography Visualization</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
 
 // Typography
