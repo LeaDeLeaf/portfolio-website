@@ -1,3 +1,4 @@
+// Development Work Section
 // Hotel Management App
 tippy('#hotelmanagement1', {
     placement: 'bottom',
@@ -236,6 +237,113 @@ tippy('#exercisetracker6', {
     placement: 'bottom',
     allowHTML: true,
     content: "<center>Failure in reaching goal section</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+
+// Graphics Design Section
+// Castle On Ice
+
+
+
+// Chinese Culture Event Poster
+
+
+
+// Travel Magazine Design
+
+
+
+// Travel Website Prototype
+
+
+
+// Portfolio Prototype
+
+
+
+// Typography
+
+
+// Immersive Tech Section
+// Haunted House VR Game
+tippy('#hauntedhousegame1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Full Gameplay of Game</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Puzzle 1 Room - Before Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame3', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Puzzle 2 Room - Before Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame4', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Puzzle 3 Room - Before Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame5', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Haunted House Entire Layout - Before Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame6', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Puzzle 1 Room - After Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame7', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Puzzle 2 Room - After Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame8', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Puzzle 3 Room - After Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame9', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Haunted House Entire Layout - After Effects</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#hauntedhousegame10', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Panaromic Sketch of Game</center>",
     animation: 'scale-extreme',
     arrow: false,
 });
