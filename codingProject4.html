@@ -89,7 +89,7 @@
         height: 19.5em; position: absolute; margin-left: 8%;"></div>
         
         <!--Pink rectangle-->
-        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 28em; 
+        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 20em; 
         position: absolute; margin-left: 11%; margin-top: 5%;">
         </div>
 
@@ -98,35 +98,76 @@
             font-size: 3.5em; font-weight: 500; margin-left: 12%; margin-top: 3%;">Covid-19 Website</span>
 
             <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
-              Made in Visual Studio Code using<br>HTML, JavaScript & CSS</p>
+              Made in Visual Studio Code using<br>HTML, JavaScript & CSS</p>   
 
-        <!--Image-->
-        <div class="rectangle" style="background-color: grey; width: 30em; height: 60em; z-index: 3; margin-top: 22%; margin-left: 54%; position: absolute;"></div>
+      <!--Description-->
+      <div class="container-fluid description" >
 
-        <!--Description-->
-        <div class="container-fluid" id="description">
-            <p>This is made to display the<br>
-                Covid Situation in Singapore &<br>
-                show the various polyclinics<br>
-                that you can receive a vaccination.<br><br>
-            </p>
-        
-            <p>In this web app, I used various<br>
-                JavaScript libraries to create<br> 
-                more smoother transitions.<br>
-                In addition, using these libraries<br>
-                allowed me to compile data in a nice<br>
-                format & layout.<br><br>
-            </p> 
-            <p>
-                This gives me a good<br>
-                understanding about Front-End Web<br>
-                Development.<br><br>
-            </p>
-                
-            
-                
+        <div class="row">
+          <div class="col-4 description-text" style="margin-top: 16em;">
+            <p>This is made to display the
+              Covid Situation in Singapore &
+              show the various polyclinics
+              that you can receive a vaccination.
+          </p>
+          </div>
+          <div class="col-6">
+            <div class="container-fluid video" style="margin-top: 29em;">
+              <video controls id="covid1">
+                <source src="videos/devWorkVids/Vaccination Centres - Google Chrome 2023-05-27 23-50-17.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-4 description-text">
+            <p>In this web app, I used various
+              JavaScript libraries to create
+              more smoother transitions.
+              In addition, using these libraries
+              allowed me to compile data in a nice
+              format & layout.
+          </p> 
+          </div>
+          <div class="col-6">
+            <div class="container-fluid video">
+              <div>
+                <img id="covid2" src="images/devWorkImg/covidWeb1.JPG">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4 description-text" style="margin-top: 5em;">
+            <p>
+              This gives me a good
+              understanding about Front-End Web
+              Development.
+          </p>
+          </div>
+          <div class="col-6">
+            <div class="container-fluid video" style="margin-top: 7em;">
+              <div>
+                <img id="covid3" src="images/devWorkImg/covidWeb2.JPG">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--Additional Images-->
+      <div class="container-fluid g-5 text-center" id="projectShow">
+        <div class="col-12">
+            <div class="row row-cols-3" id="work-list">
+                <div class="work col" id="covid4">
+                  <img src="images/devWorkImg/covidWeb3.JPG">
+                </div>
+              </div>
+        </div>
+    </div>
 
      <!-- Footer -->
         <!-- Footer -->
@@ -186,11 +227,14 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <!-- Add the CDN link for Tippy.js and Popper here -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+          <!-- Production -->
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+
+          <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-extreme.css"/>
 
         <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
-        <script src="myscripts.js"></script> <!--Take note that the external js file do not need the script tag-->
+        <script src="scripts/commonPortfolioSub.js"></script> <!--Take note that the external js file do not need the script tag-->
 
         <!--JS script or JS script libraries like fullPage.js and anime.js-->
         <script>

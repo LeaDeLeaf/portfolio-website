@@ -71,12 +71,9 @@
 
   footer{
     list-style-type: none;
-    position: absolute;
-    width: 100%;
+    position: relative;
     height: 25em;
     z-index:1;
-    right: 1em;
-    bottom: -45em;
     padding: 2em;
     font-weight: bold;
     font-style: italic;

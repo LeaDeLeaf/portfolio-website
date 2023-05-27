@@ -74,17 +74,15 @@ body{
 
   footer{
     list-style-type: none;
-    position: absolute;
-    width: 100%;
+    position: relative;
     height: 25em;
     z-index:1;
-    right: 1em;
-    bottom: -95em;
     padding: 2em;
     font-weight: bold;
     font-style: italic;
     color:  #F5D7E3;
   }
+
 
   #socialFoot{
     background-color: #F5D7E3;
@@ -93,13 +91,16 @@ body{
     margin-top: 3%;
   }
 
-  #description{
+  .description{
+    position: relative;
+  }
+
+  .description-text{
     z-index: 3;
     color: #F5D7E3;
     font-size: 2em;
-    margin-left: 13%;
-    position: absolute;
-    margin-top: 37%;
+    margin-left: 6em;
+    margin-top: 2.5em;
   }
 
   #insta, #linkedin{
@@ -109,4 +110,65 @@ body{
   #insta:hover, #linkedin:hover{
     color: #A8577E;
   }
+
+  .video{
+    z-index: 3;
+    position: relative;
+    margin-top: 5em;
+    margin-left: 3em;
+  }
+
+  video{
+    width: 75%;
+    height: auto;
+  }
+
+  .video img{
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.4s;
+    object-fit: cover;
+  }
+
+  .video:hover img{
+    transform: scale(1.05);
+  }
+
+  /* video::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1 !important;
+ } */
+
+ #projectShow{
+  position: relative;
+  z-index: 1;
+}
+
+#work-list{
+  margin: 2%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.4s;
+  height: 15em;
+  object-fit: cover;
+}
+
+.work:hover img{
+  transform: scale(1.1);
+}
+
 

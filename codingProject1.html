@@ -89,7 +89,7 @@
         height: 19.5em; position: absolute; margin-left: 8%;"></div>
         
         <!--Pink rectangle-->
-        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 28em; 
+        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 20em; 
         position: absolute; margin-left: 11%; margin-top: 5%;">
         </div>
 
@@ -100,34 +100,91 @@
             <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
               Made in Eclipse IDE using the Java<br>Programming Language</p>
 
-        <!--Image-->
-        <div class="rectangle" style="background-color: grey; width: 30em; height: 60em; z-index: 3; margin-top: 22%; margin-left: 54%; position: absolute;"></div>
-
         <!--Description-->
-        <div class="container-fluid" id="description">
-            <p>This app is a program that allows hotel<br>
-              administrators to manage hotel<br>
-              rooms members and reservations.<br><br>
-            </p>
-        
-            <p>The administrators would be able to<br>
-              view all rooms, update room price,<br>
-              add a new member, cancel<br>
-              reservation for a member, calculate<br>
-              revenue by year and conduct a lucky<br>
-              draw.<br><br>
-            </p>
-                
-            <p>This app is made using the Eclipse IDE<br>
-              and allowed me to gain a better<br>
-              understanding of the internal<br>
-              workings of each application.<br>
-            </p>
+        <div class="container-fluid description" >
+
+          <div class="row">
+            <div class="col-4 description-text" style="margin-top: 15em;">
+              <p>This app is a program that allows hotel
+                administrators to manage hotel
+                rooms members and reservations.
+              </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 28em;">
+                <video controls id="hotelmanagement1">
+                  <source src="videos/devWorkVids/C206_JavaWorkspace - Assignment_Lea_21025553_src_HotelManagement.java - Eclipse IDE 2023-04-24 23-53-39.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text">
+              <p>The administrators would be able to
+                view all rooms, update room price,
+                add a new member, cancel
+                reservation for a member, calculate
+                revenue by year and conduct a lucky
+                draw.
+              </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video">
+                <video controls id="hotelmanagement2">
+                  <source src="videos/devWorkVids/C206_JavaWorkspace - Assignment_Lea_21025553_src_Helper.java - Eclipse IDE 2023-04-24 23-51-32.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text">
+              <p>This app is made using the Eclipse IDE
+                and allowed me to gain a better
+                understanding of the internal
+                workings of each application.
+              </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video">
+                <video controls id="hotelmanagement3">
+                  <source src="videos/devWorkVids/C206_JavaWorkspace - Assignment_Lea_21025553_src_Reservation.java - Eclipse IDE 2023-04-24 23-57-00.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-     <!-- Footer -->
+        <!--Additional Images-->
+        <div class="container-fluid g-5 text-center" id="projectShow">
+          <div class="col-12">
+              <div class="row" id="work-list">
+                  <div class="work col" id="hotelmanagement4">
+                    <img src="images/devWorkImg/hotelManagementApp1.JPG">
+                  </div>
+
+                  <div class="work col" id="hotelmanagement5">
+                    <img src="images/devWorkImg/hotelManagementAppRoom.JPG">
+                  </div>
+
+                  <div class="work col" id="hotelmanagement6">
+                    <img src="images/devWorkImg/hotelManagementAppAdmin.JPG">
+                  </div>
+                </div>
+
+                <div class="row row-cols-3" id="work-list">
+                  <div class="work col" id="hotelmanagement7">
+                    <img src="images/devWorkImg/hotelManagementAppMember.JPG">
+                  </div>
+
+                </div>
+          </div>
+      </div>
+
         <!-- Footer -->
-        <div class="container-fluid">
+        <div class="container-fluid footer">
           <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-3 py-5 my-5 border-top border-bottom border-2 border-white">
             <div class="col mb-2">
               <p style="text-align: start; margin-top: 15em;"><h5>©2023 Lea Gabay</h5></p>
@@ -183,11 +240,14 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <!-- Add the CDN link for Tippy.js and Popper here -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+          <!-- Production -->
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+
+          <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-extreme.css"/>
 
         <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
-        <script src="myscripts.js"></script> <!--Take note that the external js file do not need the script tag-->
+        <script src="scripts/commonPortfolioSub.js"></script> <!--Take note that the external js file do not need the script tag-->
 
         <!--JS script or JS script libraries like fullPage.js and anime.js-->
         <script>

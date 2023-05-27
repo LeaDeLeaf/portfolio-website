@@ -89,7 +89,7 @@
         height: 19.5em; position: absolute; margin-left: 8%;"></div>
         
         <!--Pink rectangle-->
-        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 28em; 
+        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 20em; 
         position: absolute; margin-left: 11%; margin-top: 5%;">
         </div>
 
@@ -100,33 +100,63 @@
             <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
               Made in Visual Studio Code using<br>HTML, JavaScript & CSS</p>
 
-        <!--Image-->
-        <div class="rectangle" style="background-color: grey; width: 30em; height: 60em; z-index: 3; margin-top: 22%; margin-left: 54%; position: absolute;"></div>
-
         <!--Description-->
-        <div class="container-fluid" id="description">
-            <p>This web app presents users to be<br>
-                an instructor in the website or<br>
-                browse through the courses available<br>
-                in the website.<br><br>
-            </p>
-        
-            <p>In this web app, I used various<br>
-                JavaScript & CSS libraries to<br> 
-                create more smoother transitions.<br>
-                In addition, using these libraries<br>
-                allowed me to compile data in a nice<br>
-                format & layout.<br><br>
+        <div class="container-fluid description" >
+
+          <div class="row">
+            <div class="col-4 description-text" style="margin-top: 16em;">
+              <p>This web app presents users to be
+                an instructor in the website or
+                browse through the courses available
+                in the website.
+              </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 29em;">
+                <video controls id="soi1">
+                  <source src="videos/devWorkVids/SOI Learning Portal - Homepage - Google Chrome 2023-05-28 00-20-27.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text">
+              <p>In this web app, I used various
+                JavaScript & CSS libraries to
+                create more smoother transitions.
+                In addition, using these libraries
+                allowed me to compile data in a nice
+                format & layout.
             </p> 
-            <p>
-                This gives me a good understanding<br>
-                about Front-End Web Development &<br>
-                allowed me to hone my technical<br>
-                skills.<br><br>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 6em;">
+                <div>
+                  <img id="soi2" src="images/devWorkImg/soiWeb.JPG">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text" style="margin-top: 4.5em;">
+              <p>
+                This gives me a good understanding
+                about Front-End Web Development &
+                allowed me to hone my technical
+                skills.
             </p>
-                
-            
-                
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 7em; margin-bottom: 10%;">
+                <div>
+                  <img id="soi3" src="images/devWorkImg/soiWeb2.JPG">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
      <!-- Footer -->
@@ -187,11 +217,14 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <!-- Add the CDN link for Tippy.js and Popper here -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+          <!-- Production -->
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+
+          <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-extreme.css"/>
 
         <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
-        <script src="myscripts.js"></script> <!--Take note that the external js file do not need the script tag-->
+        <script src="scripts/commonPortfolioSub.js"></script> <!--Take note that the external js file do not need the script tag-->
 
         <!--JS script or JS script libraries like fullPage.js and anime.js-->
         <script>

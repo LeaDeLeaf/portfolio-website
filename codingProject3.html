@@ -89,7 +89,7 @@
         height: 19.5em; position: absolute; margin-left: 8%;"></div>
         
         <!--Pink rectangle-->
-        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 28em; 
+        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 20em; 
         position: absolute; margin-left: 11%; margin-top: 5%;">
         </div>
 
@@ -100,29 +100,77 @@
             <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
               Made in NetBeans IDE using HTML,<br>CSS, PHP & JavaScript</p>
 
-        <!--Image-->
-        <div class="rectangle" style="background-color: grey; width: 30em; height: 60em; z-index: 3; margin-top: 22%; margin-left: 54%; position: absolute;"></div>
-
         <!--Description-->
-        <div class="container-fluid" id="description">
-            <p>This web application is made<br>
-            for users to review different hotels<br>
-            featured in the website.<br><br>
+        <div class="container-fluid description" >
+
+          <div class="row">
+            <div class="col-4 description-text" style="margin-top: 16em;">
+              <p>This web application is made
+                for users to review different hotels
+                featured in the website.
+                </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 29em;">
+                <video controls id="hotelreview1">
+                  <source src="videos/devWorkVids/Login Page - Google Chrome 2023-04-26 17-11-36.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text">
+              <p>The users will be able to create &
+                maintain their accounts, view the
+                various hotels to review, & maintain
+                their reviews for each hotel.
             </p>
-        
-            <p>The users will be able to create &<br>
-                maintain their accounts, view the<br>
-                various hotels to review, & maintain<br>
-                their reviews for each hotel.<br><br>
-            </p>
-                
-            <p>This app is made using NetBeans<br>
-              IDE and allowed me to understand &<br>
-              apply the knowledge of website<br>
-              development and be able to develop<br>
-              a working web application in PHP.<br>
-            </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video">
+                <div>
+                  <img id="hotelreview2" src="images/devWorkImg/hotelListWebApp1.JPG">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text">
+              <p>This app is made using NetBeans
+                IDE and allowed me to understand &
+                apply the knowledge of website
+                development and be able to develop
+                a working web application in PHP.
+              </p>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 7em;">
+                <div>
+                  <img id="hotelreview3" src="images/devWorkImg/hotelListWebApp2.JPG">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!--Additional Images-->
+        <div class="container-fluid g-5 text-center" id="projectShow">
+          <div class="col-12">
+              <div class="row row-cols-3" id="work-list">
+                  <div class="work col" id="hotelreview4">
+                    <img src="images/devWorkImg/hotelListWebApp3.JPG">
+                  </div>
+
+                  <div class="work col" id="hotelreview5">
+                    <img src="images/devWorkImg/hotelListWebApp4.JPG">
+                  </div>
+
+              </div>
+          </div>
+      </div>
 
      <!-- Footer -->
         <!-- Footer -->
@@ -182,15 +230,19 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <!-- Add the CDN link for Tippy.js and Popper here -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+          <!-- Production -->
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+
+          <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-extreme.css"/>
 
         <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
-        <script src="myscripts.js"></script> <!--Take note that the external js file do not need the script tag-->
+        <script src="scripts/commonPortfolioSub.js"></script> <!--Take note that the external js file do not need the script tag-->
 
         <!--JS script or JS script libraries like fullPage.js and anime.js-->
         <script>
-
+          /* now play three times as fast just for the heck of it */
+          document.querySelector('video').playbackRate = 3.0;
         </script>
 
     </body>

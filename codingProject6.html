@@ -89,7 +89,7 @@
         height: 19.5em; position: absolute; margin-left: 8%;"></div>
         
         <!--Pink rectangle-->
-        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 28em; 
+        <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 20em; 
         position: absolute; margin-left: 11%; margin-top: 5%;">
         </div>
 
@@ -100,32 +100,82 @@
             <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
               Made in Visual Studio Code using<br>HTML, JavaScript & CSS</p>
 
-        <!--Image-->
-        <div class="rectangle" style="background-color: grey; width: 30em; height: 60em; z-index: 3; margin-top: 22%; margin-left: 54%; position: absolute;"></div>
-
         <!--Description-->
-        <div class="container-fluid" id="description">
-            <p>This web app allows the user to have<br>
-                their own personalised exercise<br>
-                tracker for them to coveniently use.<br><br>
+        <div class="container-fluid description" >
+
+          <div class="row">
+            <div class="col-4 description-text" style="margin-top: 16em;">
+              <p>This web app allows the user to have
+                their own personalised exercise
+                tracker for them to coveniently use.
             </p>
-        
-            <p>It helps track the progress over the<br>
-                course of 7 days and see if the user<br>
-                have met the ideal goal.<br><br>
-            </p> 
-            <p>
-                I used a various amount of JavaScript<br>
-                & CSS libraries and this have allowed<br>
-                me to hone my programming skills<br>
-                a lot. In addition, it broadens my<br>
-                understanding of Front-End<br>
-                Development.<br><br>
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 29em;">
+                <video controls id="exercisetracker1">
+                  <source src="videos/devWorkVids/Vaccination Centres - Google Chrome 2023-04-27 10-42-35.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text" style="margin-top: 4em;">
+              <p>It helps track the progress over the
+                course of 7 days and see if the user
+                have met the ideal goal.
+              </p> 
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video">
+                <div>
+                  <img id="exercisetracker2" src="images/devWorkImg/exerciseTracker1.JPG">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 description-text">
+              <p>
+                I used a various amount of JavaScript
+                & CSS libraries and this have allowed
+                me to hone my programming skills
+                a lot. In addition, it broadens my
+                understanding of Front-End
+                Development.
             </p>
-                
-            
-                
+            </div>
+            <div class="col-6">
+              <div class="container-fluid video" style="margin-top: 7em;">
+                <div>
+                  <img id="exercisetracker3" src="images/devWorkImg/exerciseTracker2.JPG">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!--Additional Images-->
+        <div class="container-fluid g-5 text-center" id="projectShow">
+          <div class="col-12">
+              <div class="row row-cols-3" id="work-list">
+                  <div class="work col" id="exercisetracker4">
+                    <img src="images/devWorkImg/exerciseTracker3.JPG">
+                  </div>
+
+                  <div class="work col" id="exercisetracker5">
+                    <img src="images/devWorkImg/exerciseTracker4.JPG">
+                  </div>
+
+                  <div class="work col" id="exercisetracker6">
+                    <img src="images/devWorkImg/exerciseTracker5.JPG">
+                  </div>
+
+              </div>
+          </div>
+      </div>
 
      <!-- Footer -->
         <!-- Footer -->
@@ -185,11 +235,14 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <!-- Add the CDN link for Tippy.js and Popper here -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+          <!-- Production -->
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+
+          <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-extreme.css"/>
 
         <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
-        <script src="myscripts.js"></script> <!--Take note that the external js file do not need the script tag-->
+        <script src="scripts/commonPortfolioSub.js"></script> <!--Take note that the external js file do not need the script tag-->
 
         <!--JS script or JS script libraries like fullPage.js and anime.js-->
         <script>
