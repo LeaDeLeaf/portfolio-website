@@ -90,7 +90,7 @@ body{
   #submitBtn::before{
     position: absolute;
     content: "";
-    top: 13.8em;
+    top: 11.5em;
     left: 28em;
     width: 20em;
     height: 0;
@@ -151,7 +151,7 @@ body{
     z-index: 2;
     position: absolute;
     margin-left: 1%;
-    margin-top: 9%;
+    margin-top: 10%;
     text-align: center;
   }
 
