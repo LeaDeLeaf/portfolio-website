@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500&family=Source+Code+Pro:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
 
 
 .bgclass {
@@ -13,6 +13,7 @@
 
 body{
   overflow-x: hidden;
+  font-family: 'Source Code Pro';
 }
   
   .gradient {
@@ -29,6 +30,8 @@ body{
     z-index: 2;
     padding-left: 3.5em;
     padding-right: 3.5em;
+    font-family: 'Nunito Sans';
+    font-weight: bolder;
   }
 
   #navbar .nav-link{
@@ -43,6 +46,10 @@ body{
 
   #navbarText{
     margin-bottom: 2%;
+  }
+
+  #navbarText h4{
+    font-weight: 700;
   }
 
   #navbarText .nav-link::after {
@@ -117,7 +124,7 @@ body{
     right: 1em;
     bottom: -160em;
     padding: 2em;
-    font-weight: bold;
+    font-family: 'Nunito Sans';
     font-style: italic;
     color:  #F5D7E3;
   }
@@ -129,6 +136,10 @@ body{
 
   #footerNav .nav-link:hover{
     color: #043565;
+  }
+
+  #footerNav h5{
+    font-weight: 700;
   }
 
   #socialFoot{
@@ -156,7 +167,7 @@ body{
   }
 
   .multiText{
-    font-weight: 500;
+    font-weight: 600;
     color:#F4A5AE;
   }
 
