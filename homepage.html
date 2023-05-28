@@ -362,9 +362,12 @@
   </div>
 
   <!--Text on Video-->
-  <div class="container-fluid" id="videoText">
-    <span style="font-size: 6em; color: #F5D7E3;">Lea Gabay</span>
-    <h2 style="color: #A8577E">UI/UX Designer, IT Developer</h2>
+  <div class="container-fluid" id="videoItems">
+    <h2 style="color: #A8577E; margin-right: 10.5em;">Hi! I'm</h2>
+    <span style="font-size: 5em; color: #F5D7E3;">Lea Gabay</span>
+    <h2 style="color: #A8577E; text-align: start; margin-left: 16.75em; margin-top: 1%;">I'm a <span class="multiText"></span></h2>
+    <br><br>
+    <a href="LeaResume_May2023.pdf" download="LeaGabay_Resume"><button type="submit" class="btn" id="submitBtn">Download Resume</button></a>
   </div>
 
   <!--Carousel-->
@@ -469,16 +472,16 @@
     </button>
   </div>
 
-  <!--Pink rectangle behind latest vids section-->
+  <!--Pink rectangle behind featured vids section-->
   <div class="container-fluid" style="background-color: #F4A5AE; width: 85em; z-index: 1; height: 65%; position: absolute;
         margin-left: 5%; margin-top: -23%;">
   </div>
 
-  <!--Dark rectangle behind latest vids section-->
+  <!--Dark rectangle behind featured vids section-->
   <div class="container-fluid" style="background-color: #043565; width: 75em; z-index: 2; height: 65%; position: absolute;
         margin-left: 10.5%; margin-top: -35%;"></div>
 
-  <h1 style="color: #F5D7E3; z-index: 3; margin-top: -31%; margin-left: 17%; position: absolute">Latest Projects</h1>
+  <h1 style="color: #F5D7E3; z-index: 3; margin-top: -31%; margin-left: 17%; position: absolute">Featured Projects</h1>
 
   <!--Pink rectangle behind traits section-->
   <div class="container-fluid" style="background-color: #F4A5AE; width: 85em; z-index: 1; height: 100%; position: absolute;
@@ -603,11 +606,19 @@
   <script src="https://unpkg.com/tippy.js@6"></script>
 
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
-  <script src="scripts/transitions.js"></script> <!--Take note that the external js file do not need the script tag-->
+  <script src="scripts/transitions.js"></script> 
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->
   <script>
-
+    var typingEffect = new Typed(".multiText",{
+      strings : ["UI/UX Designer", "IT Developer", "Business Analyst Enthusiast"],
+      loop : true,
+      typeSpeed : 80,
+      backSpeed : 60,
+      backDelay : 1000
+    });
   </script>
 
 </body>
