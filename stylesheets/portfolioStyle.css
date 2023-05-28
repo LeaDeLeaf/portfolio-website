@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+
+body{
+  font-family: 'Source Code Pro';
+}
+
 .bgclass {
     display: block;
     width: 100%;
@@ -26,6 +32,7 @@ body{
     z-index: 2;
     padding-left: 3.5em;
     padding-right: 3.5em;
+    font-family: 'Nunito Sans';
   }
 
   #navbar .nav-link{
@@ -40,6 +47,10 @@ body{
 
   #navbarText{
     margin-bottom: 2%;
+  }
+
+  #navbarText h4{
+    font-weight: 700;
   }
 
   #navbarText .nav-link::after {
@@ -81,9 +92,13 @@ body{
     right: 1em;
     bottom: -225em;
     padding: 2em;
-    font-weight: bold;
+    font-family: 'Nunito Sans';
     font-style: italic;
     color:  #F5D7E3;
+  }
+
+  #footerNav h5{
+    font-weight: 700;
   }
 
   #footerNav .nav-link{
@@ -132,6 +147,7 @@ body{
    #hoverSeeMore{
     text-decoration: none; 
     color: #F5D7E3;
+    font-size: 0.9em;
    }
 
    #hoverSeeMore:hover{
