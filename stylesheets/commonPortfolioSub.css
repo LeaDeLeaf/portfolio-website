@@ -75,7 +75,7 @@ body{
   footer{
     list-style-type: none;
     position: relative;
-    height: 25em;
+    height: 28em;
     z-index:1;
     padding: 2em;
     font-weight: bold;
@@ -84,12 +84,22 @@ body{
   }
 
 
+  #footerNav .nav-link{
+    text-align: end; 
+    color:  #F5D7E3;
+  }
+
+  #footerNav .nav-link:hover{
+    color: #043565;
+  }
+
   #socialFoot{
     background-color: #F5D7E3;
     height: 15em;
     padding: 5%;
-    margin-top: 3%;
+    margin-top: 6%;
   }
+
 
   .description{
     position: relative;

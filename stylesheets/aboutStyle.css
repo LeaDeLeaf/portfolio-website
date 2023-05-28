@@ -72,7 +72,7 @@
     list-style-type: none;
     position: absolute;
     width: 100%;
-    height: 25em;
+    height: 28em;
     z-index:1;
     right: 1em;
     bottom: -220em;
@@ -82,12 +82,22 @@
     color:  #F5D7E3;
   }
 
+  #footerNav .nav-link{
+    text-align: end; 
+    color:  #F5D7E3;
+  }
+
+  #footerNav .nav-link:hover{
+    color: #043565;
+  }
+
   #socialFoot{
     background-color: #F5D7E3;
     height: 15em;
     padding: 5%;
-    margin-top: 3%;
+    margin-top: 6%;
   }
+
 
   #myPic{
     height: 50em;
