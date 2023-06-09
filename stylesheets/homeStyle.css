@@ -81,7 +81,7 @@ body{
     width: 11em;
   }
 
-  #submitBtn{
+  #resumeBtn{
     /* background-color: #F5D7E3; */
     color: #F5D7E3;
     font-weight: 500;
@@ -92,7 +92,7 @@ body{
     transition: ease-in-out .35s;
   }
 
-  #submitBtn::before{
+  #resumeBtn::before{
     position: absolute;
     content: "";
     width: inherit;
@@ -108,11 +108,11 @@ body{
     transform: translate(-50%) 
   }
 
-  #submitBtn:hover{
+  #resumeBtn:hover{
     color: #A8577E;
   }
 
-  #submitBtn:hover::before{
+  #resumeBtn:hover::before{
     height: inherit;
   }
 
