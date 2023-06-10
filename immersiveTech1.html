@@ -45,6 +45,48 @@
     #currentPg {
       color: #F5D7E3;
     }
+
+    #submitBtn{
+      /* background-color: #F5D7E3; */
+      color: #F5D7E3;
+      font-weight: 500;
+      font-size: 1.25em;
+      border: 2px solid #F5D7E3; 
+      height: 10vh;
+      width: 100vh;
+      transition: ease-in-out .35s;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%);
+      margin-bottom: 10%;
+    }
+
+    #submitBtn::before{
+      position: absolute;
+      content: "";
+      width: inherit;
+      height: 0;
+      background-color: #F5D7E3;
+      z-index: -1;
+      border-radius: 5px;
+      transition: ease-in-out .35s;
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%) 
+    }
+
+    #submitBtn:hover{
+      color: #A8577E;
+    }
+
+    #submitBtn:hover::before{
+      height: inherit;
+    }
   </style>
 
 </head>
@@ -359,27 +401,27 @@
   </nav>
 
   <!-- Dark rectangle-->
-  <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 52em; z-index: 2; 
-        height: 19.5em; position: absolute; margin-left: 8%;"></div>
+  <div class="container-fluid border border-5 border-white" style="background-color: #043565; width: 52%; z-index: 2; 
+        height: 36%; position: absolute; margin-left: 8%;"></div>
 
   <!--Pink rectangle-->
-  <div class="container-fluid" style="background-color: #F4A5AE; width: 75em; z-index: 1; height: 20em; 
+  <div class="container-fluid" style="background-color: #F4A5AE; width: 75%; z-index: 1; height: 40%; 
         position: absolute; margin-left: 11%; margin-top: 5%;">
   </div>
 
   <!--Heading-->
-  <span style="color: #F5D7E3; z-index: 3; position: absolute; font-style: italic;
-            font-size: 3.5em; font-weight: 600; margin-left: 12%; margin-top: 3%; font-family: 'Nunito Sans';">VR Escape Room Game</span>
+  <h1 style="color: #F5D7E3; z-index: 3; position: absolute; font-style: italic;
+             font-weight: 600; margin-left: 12%; margin-top: 4%; font-family: 'Nunito Sans';">VR Escape Room Game</h1>
 
-  <p style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute; font-size: 2em;">
+  <h3 style="color: #F5D7E3; z-index: 3; margin-top: 10%; margin-left: 12%; position: absolute;">
     Made in Unity IDE with various assets<br>
-    & libraries</p>
+    & libraries</h3>
 
   <!--Description-->
   <div class="container-fluid description">
 
     <div class="row">
-      <div class="col-4 description-text" style="margin-top: 20em;">
+      <div class="col-4 description-text" style="margin-top: 85vh;">
         <p>This app is made using the Unity IDE
           where the player is immersed in a
           gameplay of having to escape a
@@ -387,7 +429,7 @@
         </p>
       </div>
       <div class="col-6">
-        <div class="container-fluid video" style="margin-top: 28em;">
+        <div class="container-fluid video" style="margin-top: 60vh;">
           <video controls id="hauntedhousegame1">
             <source src="videos/gameVideo.mp4" type="video/mp4">
           </video>
@@ -396,7 +438,7 @@
     </div>
 
     <div class="row">
-      <div class="col-4 description-text" style="margin-top: 4em;">
+      <div class="col-4 description-text" style="margin-top: 22.5vh;">
         <p>The players would have to solve a
           total of 3 puzzles before they can
           successfully finish the game.
@@ -412,7 +454,7 @@
     </div>
 
     <div class="row">
-      <div class="col-4 description-text">
+      <div class="col-4 description-text" style="margin-top: 17.5vh;">
         <p>Through various sound effects &
           visual effects, the rendering of
           texture of the different assets &
@@ -471,6 +513,9 @@
       </div>
     </div>
   </div>
+
+  <!--Button-->
+  <a href="#" onclick='window.open("Game Design Document Template.pdf");' download="Haunted House GDD - Lea Gabay" id="btnHref"><button type="submit" class="btn" id="submitBtn">Review Game Design Document(GDD)</button></a>
 
   <!-- Footer -->
   <div class="container-fluid">

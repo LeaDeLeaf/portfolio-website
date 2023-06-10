@@ -32,12 +32,12 @@ window.onload = () => {
 
     for (let i = 0; i < anchors.length; i++){
         const anchor = anchors[i];
-        const resumeBtn = document.getElementById("btnHref");
+        const hrefBtn = document.getElementById("btnHref");
         const contactBtn = document.getElementById("contactBtn");
         
-        if(anchors[i] == resumeBtn){
+        if(anchors[i] == hrefBtn){
 
-            resumeBtn.addEventListener('click', function(){
+            hrefBtn.addEventListener('click', function(){
                 window.location.reload;
             })
 
