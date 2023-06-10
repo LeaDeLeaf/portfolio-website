@@ -90,7 +90,7 @@ body{
     height: 28em;
     z-index:1;
     right: 1em;
-    bottom: -225em;
+    bottom: -450vh;
     padding: 2em;
     font-family: 'Nunito Sans';
     font-style: italic;
@@ -117,27 +117,26 @@ body{
     margin-top: 6%;
   }
 
-
   video{
     position: absolute;
     z-index: 1;
+    width: 70%;
+    height: 70%;
     margin-left: 15%;
-    height: 37em;
-    width: 66.5em;
     object-fit: cover;
   }
 
   #videoText{
     z-index: 2;
-    position: absolute;
+    position: relative;
     margin-left: 1%;
     margin-top: 12%;
     text-align: center;
   }
 
   .croppedPics img{
-    width: 50em;
-    height: 50em;
+    width: 100vh;
+    height: auto;
     z-index: 2;
     position: absolute;
     object-fit: fill;
