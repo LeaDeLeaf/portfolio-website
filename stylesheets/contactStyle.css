@@ -116,19 +116,19 @@ body{
     position: relative;
   }
 
-  #submitBtn{
+  #contactBtn{
     /* background-color: #F5D7E3; */
     color: #F5D7E3;
     font-weight: 500;
     font-size: 1.25em;
     border: 2px solid #F5D7E3; 
     height: 4em;
-    padding: 2.4%; 
+    padding: 3.5%; 
     width: 28.5em;
     transition: ease-in-out .35s;
   }
 
-  #submitBtn::before{
+  #contactBtn::before{
     position: absolute;
     content: "";
     top: 79%;
@@ -141,11 +141,11 @@ body{
     transition: ease-in-out .35s;
   }
 
-  #submitBtn:hover{
+  #contactBtn:hover{
     color: #A8577E;
   }
 
-  #submitBtn:hover::before{
+  #contactBtn:hover::before{
     height: 13%;
   }
 
