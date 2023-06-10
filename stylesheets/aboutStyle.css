@@ -81,12 +81,10 @@ body{
 
   footer{
     list-style-type: none;
-    position: absolute;
-    width: 100%;
+    position: relative;
     height: 28em;
-    z-index:1;
-    right: 1em;
-    bottom: -220em;
+    z-index: 1;
+    bottom: -330vh;
     padding: 2em;
     font-family: 'Nunito Sans';
     font-style: italic;
@@ -118,33 +116,35 @@ body{
     height: 50em;
     width: auto;
     z-index: 1;
-    position: absolute;
-    margin-top: 7%;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 3%;
   }
 
   #heading{
-    font-size: 3em;
-    font-weight: 600;
-    margin-left: 12%;
+    font-weight: 700;
+    margin-left: 25%;
     margin-top: -1%;
-    position: absolute;
+    margin-bottom: 4vh;
+    position: relative;
     z-index: 1;
     color: #F5D7E3;
     font-family: 'Nunito Sans';
   }
 
   p{
-    position: absolute;
-    margin-left: 12%;
+    position: relative;
+    margin-left: 25%;
     z-index: 1;
     font-size: 1.5em;
     color: #F5D7E3;
-    line-height: 2em;
+    line-height: 6vh;
+    margin-bottom: 5vh;
   }
 
-h1{
+/* h1{
   font-size: 1.75em;
-}
+} */
 
   #insta, #linkedin{
     color: #043565;
