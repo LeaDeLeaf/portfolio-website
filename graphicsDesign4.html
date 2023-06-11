@@ -45,6 +45,48 @@
     #currentPg {
       color: #F5D7E3;
     }
+
+    #submitBtn{
+      /* background-color: #F5D7E3; */
+      color: #F5D7E3;
+      font-weight: 500;
+      font-size: 1.25em;
+      border: 2px solid #F5D7E3; 
+      height: 10vh;
+      width: 80vh;
+      transition: ease-in-out .35s;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%);
+      margin-bottom: 10%;
+    }
+
+    #submitBtn::before{
+      position: absolute;
+      content: "";
+      width: inherit;
+      height: 0;
+      background-color: #F5D7E3;
+      z-index: -1;
+      border-radius: 5px;
+      transition: ease-in-out .35s;
+      position: absolute;
+      top: -3%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%) 
+    }
+
+    #submitBtn:hover{
+      color: #A8577E;
+    }
+
+    #submitBtn:hover::before{
+      height: inherit;
+    }
   </style>
 
 </head>
@@ -477,6 +519,24 @@
         <div class="work col" id="travelproto14">
           <img src="images/graphicDesignImg/Explore Successful Page.jpg">
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Button-->
+  <div class="container-fluid">
+    <div class="col">
+      <div class="row">
+
+        <div class="col-6">
+          <a href="#" onclick='window.open("https://xd.adobe.com/view/552125b5-0f98-4cfd-8b3b-1adff878b86e-0072/");' download="Haunted House GDD - Lea Gabay" id="btnHref"><button type="submit" class="btn" id="submitBtn">Review Travel Website Prototype</button></a>
+        </div>
+
+        <div class="col-6">
+          <a href="#" onclick='window.open("TravelBuddyDesignPlan.pdf");' download="Haunted House GDD - Lea Gabay" id="btnHref2"><button type="submit" class="btn" id="submitBtn">Review Travel Website Design Document</button></a>
+        </div>
+
       </div>
 
     </div>
