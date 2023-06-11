@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -44,6 +46,48 @@
 
     #currentPg {
       color: #F5D7E3;
+    }
+
+    #submitBtn{
+      /* background-color: #F5D7E3; */
+      color: #F5D7E3;
+      font-weight: 500;
+      font-size: 1.25em;
+      border: 2px solid #F5D7E3; 
+      height: 10vh;
+      width: 80vh;
+      transition: ease-in-out .35s;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%);
+      margin-bottom: 10%;
+    }
+
+    #submitBtn::before{
+      position: absolute;
+      content: "";
+      width: inherit;
+      height: 0;
+      background-color: #F5D7E3;
+      z-index: -1;
+      border-radius: 5px;
+      transition: ease-in-out .35s;
+      position: absolute;
+      top: -3%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%) 
+    }
+
+    #submitBtn:hover{
+      color: #A8577E;
+    }
+
+    #submitBtn:hover::before{
+      height: inherit;
     }
   </style>
 
@@ -406,7 +450,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 60vh;">
           <div>
-            <img id="travelproto1" src="images/graphicDesignImg/Home Page.jpg">
+            <img class="myImages" alt="Home Page" id="travelproto1" src="images/graphicDesignImg/Home Page.jpg">
           </div>
         </div>
       </div>
@@ -419,64 +463,82 @@
     <div class="col-12">
       <div class="row" id="work-list">
         <div class="work col" id="travelproto2">
-          <img src="images/graphicDesignImg/travelProtoMoodboard.png">
+          <img class="myImages" alt="Moodboard" src="images/graphicDesignImg/travelProtoMoodboard.png">
         </div>
 
         <div class="work col" id="travelproto3">
-          <img src="images/graphicDesignImg/About Us Page.jpg">
+          <img class="myImages" alt="About Us Page" src="images/graphicDesignImg/About Us Page.jpg">
         </div>
 
         <div class="work col" id="travelproto4">
-          <img src="images/graphicDesignImg/Explore Page.jpg">
+          <img class="myImages" alt="Explore Page" src="images/graphicDesignImg/Explore Page.jpg">
         </div>
       </div>
 
       <div class="row" id="work-list">
         <div class="work col" id="travelproto5">
-          <img src="images/graphicDesignImg/Products Page - Hotel.jpg">
+          <img class="myImages" alt="Products Page - Hotel" src="images/graphicDesignImg/Products Page - Hotel.jpg">
         </div>
 
         <div class="work col" id="travelproto6">
-          <img src="images/graphicDesignImg/Products Page - Attractions.jpg">
+          <img class="myImages" alt="Products Page - Attractions" src="images/graphicDesignImg/Products Page - Attractions.jpg">
         </div>
 
         <div class="work col" id="travelproto7">
-          <img src="images/graphicDesignImg/Products Page - Flights.jpg">
+          <img class="myImages" alt="Products Page - Flights" src="images/graphicDesignImg/Products Page - Flights.jpg">
         </div>
       </div>
 
       <div class="row" id="work-list">
         <div class="work col" id="travelproto8">
-          <img src="images/graphicDesignImg/Booking Recommendation Hotel Page [Default].jpg">
+          <img class="myImages" alt="Booking Page - Hotel" src="images/graphicDesignImg/Booking Recommendation Hotel Page [Default].jpg">
         </div>
 
         <div class="work col" id="travelproto9">
-          <img src="images/graphicDesignImg/Booking Recommendation Attractions Page.jpg">
+          <img class="myImages" alt="Booking Page - Attractions" src="images/graphicDesignImg/Booking Recommendation Attractions Page.jpg">
         </div>
 
         <div class="work col" id="travelproto10">
-          <img src="images/graphicDesignImg/Booking Recommendation Flight Page – Multi-cities.jpg">
+          <img class="myImages" alt="Booking Page - Flights" src="images/graphicDesignImg/Booking Recommendation Flight Page – Multi-cities.jpg">
         </div>
       </div>
 
       <div class="row" id="work-list">
         <div class="work col" id="travelproto11">
-          <img src="images/graphicDesignImg/Confirmation Page - Hotel.jpg">
+          <img class="myImages" alt="Confirmation Booking Page" src="images/graphicDesignImg/Confirmation Page - Hotel.jpg">
         </div>
 
         <div class="work col" id="travelproto12">
-          <img src="images/graphicDesignImg/Payment Page.jpg">
+          <img class="myImages" alt="Make Payment Page" src="images/graphicDesignImg/Payment Page.jpg">
         </div>
 
         <div class="work col" id="travelproto13">
-          <img src="images/graphicDesignImg/Thank You Page.jpg">
+          <img class="myImages" alt="Thank You Page" src="images/graphicDesignImg/Thank You Page.jpg">
         </div>
       </div>
 
       <div class="row row-cols-3" id="work-list">
         <div class="work col" id="travelproto14">
-          <img src="images/graphicDesignImg/Explore Successful Page.jpg">
+          <img class="myImages" alt="Explore Page - Successful Search" src="images/graphicDesignImg/Explore Successful Page.jpg">
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Button-->
+  <div class="container-fluid">
+    <div class="col">
+      <div class="row">
+
+        <div class="col-6">
+          <a href="#" onclick='window.open("https://xd.adobe.com/view/552125b5-0f98-4cfd-8b3b-1adff878b86e-0072/");' id="btnHref"><button type="submit" class="btn" id="submitBtn">Review Travel Website Prototype</button></a>
+        </div>
+
+        <div class="col-6">
+          <a href="#" onclick='window.open("TravelBuddyDesignPlan.pdf");' download="Travel Website Design Document - Lea Gabay" id="btnHref2"><button type="submit" class="btn" id="submitBtn">Review Travel Website Design Document</button></a>
+        </div>
+
       </div>
 
     </div>
@@ -542,6 +604,19 @@
     <div class="gradient"></div>
   </div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
 
   <!--This links are to always be before script tag-->
   <!--Anime JS link-->
@@ -564,6 +639,7 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->

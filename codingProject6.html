@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -403,7 +405,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 10vh">
           <div>
-            <img id="exercisetracker2" src="images/devWorkImg/exerciseTracker1.JPG">
+            <img class="myImages" alt="Login Page" id="exercisetracker2" src="images/devWorkImg/exerciseTracker1.JPG">
           </div>
         </div>
       </div>
@@ -423,7 +425,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 10vh;">
           <div>
-            <img id="exercisetracker3" src="images/devWorkImg/exerciseTracker2.JPG">
+            <img class="myImages" alt="Different Levels Page" id="exercisetracker3" src="images/devWorkImg/exerciseTracker2.JPG">
           </div>
         </div>
       </div>
@@ -436,15 +438,15 @@
     <div class="col-12">
       <div class="row row-cols-3" id="work-list">
         <div class="work col" id="exercisetracker4">
-          <img src="images/devWorkImg/exerciseTracker3.JPG">
+          <img class="myImages" alt="Input hours per day section" src="images/devWorkImg/exerciseTracker3.JPG">
         </div>
 
         <div class="work col" id="exercisetracker5">
-          <img src="images/devWorkImg/exerciseTracker4.JPG">
+          <img class="myImages" alt="Success in reaching goal section" src="images/devWorkImg/exerciseTracker4.JPG">
         </div>
 
         <div class="work col" id="exercisetracker6">
-          <img src="images/devWorkImg/exerciseTracker5.JPG">
+          <img class="myImages" alt="Failure in reaching goal section" src="images/devWorkImg/exerciseTracker5.JPG">
         </div>
 
       </div>
@@ -511,6 +513,19 @@
     <div class="gradient"></div>
   </div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
 
   <!--This links are to always be before script tag-->
   <!--Anime JS link-->
@@ -533,6 +548,7 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->

@@ -170,6 +170,7 @@ body{
 
 #work-list{
   margin: 2%;
+  margin: 7.5%;
   margin-top: 8%;
   margin-bottom: 8%;
 }
@@ -185,7 +186,7 @@ body{
   border-radius: 10px;
   display: block;
   transition: transform 0.4s;
-  height: 15em;
+  height: 40vh;
   object-fit: cover;
 }
 

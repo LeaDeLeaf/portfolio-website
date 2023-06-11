@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -44,6 +46,48 @@
 
     #currentPg {
       color: #F5D7E3;
+    }
+
+    #submitBtn{
+      /* background-color: #F5D7E3; */
+      color: #F5D7E3;
+      font-weight: 500;
+      font-size: 1.25em;
+      border: 2px solid #F5D7E3; 
+      height: 10vh;
+      width: 100vh;
+      transition: ease-in-out .35s;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%);
+      margin-bottom: 10%;
+    }
+
+    #submitBtn::before{
+      position: absolute;
+      content: "";
+      width: inherit;
+      height: 0;
+      background-color: #F5D7E3;
+      z-index: -1;
+      border-radius: 5px;
+      transition: ease-in-out .35s;
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%) 
+    }
+
+    #submitBtn:hover{
+      color: #A8577E;
+    }
+
+    #submitBtn:hover::before{
+      height: inherit;
     }
   </style>
 
@@ -394,7 +438,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 60vh;">
           <div>
-            <img id="travelmagazine1" src="images/graphicDesignImg/MagazineDesign2.jpg">
+            <img class="myImages" alt="Travel Magazine Moodboard" id="travelmagazine1" src="images/graphicDesignImg/MagazineDesign2.jpg">
           </div>
         </div>
       </div>
@@ -412,13 +456,16 @@
       <div class="col-6">
         <div class="container-fluid video">
           <div>
-            <img id="travelmagazine2" src="images/graphicDesignImg/MagazineDesign1.JPG">
+            <img class="myImages" alt="Travel Magazine" id="travelmagazine2" src="images/graphicDesignImg/MagazineDesign1.JPG">
           </div>
         </div>
       </div>
     </div>
 
   </div>
+
+  <!--Button-->
+  <a href="#" onclick='window.open("Magazine_Lea.pdf");' download="Travel Magazine - Lea Gabay" id="btnHref"><button type="submit" class="btn" id="submitBtn">Review Travel Magazine Design Document</button></a>
 
   <!-- Footer -->
   <div class="container-fluid">
@@ -480,6 +527,19 @@
     <div class="gradient"></div>
   </div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
 
   <!--This links are to always be before script tag-->
   <!--Anime JS link-->
@@ -502,6 +562,7 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->

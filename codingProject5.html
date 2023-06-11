@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -408,7 +410,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 10vh">
           <div>
-            <img id="soi2" src="images/devWorkImg/soiWeb.JPG">
+            <img class="myImages" alt="Navbar and Banner Section" id="soi2" src="images/devWorkImg/soiWeb.JPG">
           </div>
         </div>
       </div>
@@ -426,7 +428,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 10vh; margin-bottom: 10%;">
           <div>
-            <img id="soi3" src="images/devWorkImg/soiWeb2.JPG">
+            <img class="myImages" alt="Featured Section" id="soi3" src="images/devWorkImg/soiWeb2.JPG">
           </div>
         </div>
       </div>
@@ -494,6 +496,19 @@
     <div class="gradient"></div>
   </div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
 
   <!--This links are to always be before script tag-->
   <!--Anime JS link-->
@@ -516,6 +531,7 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->

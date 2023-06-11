@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -442,21 +444,21 @@
     <div class="col-12">
       <div class="row" id="work-list">
         <div class="work col" id="hotelmanagement4">
-          <img src="images/devWorkImg/hotelManagementApp1.JPG">
+          <img class="myImages" alt="Hotel Management App File Structure" src="images/devWorkImg/hotelManagementApp1.JPG">
         </div>
 
         <div class="work col" id="hotelmanagement5">
-          <img src="images/devWorkImg/hotelManagementAppRoom.JPG">
+          <img class="myImages" alt="Room Class (Aids in getting info about rooms)" src="images/devWorkImg/hotelManagementAppRoom.JPG">
         </div>
 
         <div class="work col" id="hotelmanagement6">
-          <img src="images/devWorkImg/hotelManagementAppAdmin.JPG">
+          <img class="myImages" alt="Admin Class (Aids in getting info about admins in the app)" src="images/devWorkImg/hotelManagementAppAdmin.JPG">
         </div>
       </div>
 
       <div class="row row-cols-3" id="work-list">
         <div class="work col" id="hotelmanagement7">
-          <img src="images/devWorkImg/hotelManagementAppMember.JPG">
+          <img class="myImages" alt="Member Class (Aids in getting info about members in the app)" src="images/devWorkImg/hotelManagementAppMember.JPG">
         </div>
 
       </div>
@@ -523,6 +525,19 @@
     <div class="gradient"></div>
   </div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+   </div>
+
 
   <!--This links are to always be before script tag-->
   <!--Anime JS link-->
@@ -545,6 +560,7 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->

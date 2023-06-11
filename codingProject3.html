@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -404,7 +406,7 @@
       <div class="col-6">
         <div class="container-fluid video">
           <div>
-            <img id="hotelreview2" src="images/devWorkImg/hotelListWebApp1.JPG">
+            <img class="myImages" alt="Login Page" id="hotelreview2" src="images/devWorkImg/hotelListWebApp1.JPG">
           </div>
         </div>
       </div>
@@ -422,7 +424,7 @@
       <div class="col-6">
         <div class="container-fluid video" style="margin-top: 7.5vh;">
           <div>
-            <img id="hotelreview3" src="images/devWorkImg/hotelListWebApp2.JPG">
+            <img class="myImages" alt="Hotel List Page" id="hotelreview3" src="images/devWorkImg/hotelListWebApp2.JPG">
           </div>
         </div>
       </div>
@@ -435,11 +437,11 @@
     <div class="col-12">
       <div class="row row-cols-3" id="work-list">
         <div class="work col" id="hotelreview4">
-          <img src="images/devWorkImg/hotelListWebApp3.JPG">
+          <img class="myImages" alt="Database of the website" src="images/devWorkImg/hotelListWebApp3.JPG">
         </div>
 
         <div class="work col" id="hotelreview5">
-          <img src="images/devWorkImg/hotelListWebApp4.JPG">
+          <img class="myImages" alt="File Structure of the Website" src="images/devWorkImg/hotelListWebApp4.JPG">
         </div>
 
       </div>
@@ -506,6 +508,19 @@
     <div class="gradient"></div>
   </div>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
 
   <!--This links are to always be before script tag-->
   <!--Anime JS link-->
@@ -528,6 +543,7 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->

@@ -470,7 +470,30 @@ tippy('#portfolioprototype6', {
 
 
 // Typography
+// Portfolio Prototype
+tippy('#alphabets1', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Finished Typography</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
+tippy('#alphabets2', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Moodboard</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
+
+tippy('#alphabets3', {
+    placement: 'bottom',
+    allowHTML: true,
+    content: "<center>Sketch of Typography</center>",
+    animation: 'scale-extreme',
+    arrow: false,
+});
 
 // Immersive Tech Section
 // Haunted House VR Game
