@@ -22,6 +22,8 @@
   <!--Take note that the external css file do not need the style tag-->
   <link rel="stylesheet" href="stylesheets/transitions.css">
 
+  <link rel="stylesheet" href="stylesheets/modalImgs.css">
+
   <!--Reference to external css file only if it hit a certain size-->
   <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
 
@@ -447,7 +449,7 @@
       <div class="col-6">
         <div class="container-fluid video">
           <div>
-            <img id="hauntedhousegame2" src="images/immersiveTechImg/GA_before1.PNG">
+            <img class="myImages" alt="Puzzle Room 1 - Before Effects" id="hauntedhousegame2" src="images/immersiveTechImg/GA_before1.PNG">
           </div>
         </div>
       </div>
@@ -466,7 +468,7 @@
       <div class="col-6">
         <div class="container-fluid video">
           <div>
-            <img id="hauntedhousegame3" src="images/immersiveTechImg/GA_before2.PNG">
+            <img class="myImages" alt="Puzzle Room 2 - Before Effects" id="hauntedhousegame3" src="images/immersiveTechImg/GA_before2.PNG">
           </div>
         </div>
       </div>
@@ -479,35 +481,35 @@
     <div class="col-12">
       <div class="row" id="work-list">
         <div class="work col" id="hauntedhousegame4">
-          <img src="images/immersiveTechImg/GA_before3.PNG">
+          <img class="myImages" alt="Puzzle Room 3 - Before Effects" src="images/immersiveTechImg/GA_before3.PNG">
         </div>
 
         <div class="work col" id="hauntedhousegame5">
-          <img src="images/immersiveTechImg/GA_before4.PNG">
+          <img class="myImages" alt="Haunted House Entire Layout - Before Effects" src="images/immersiveTechImg/GA_before4.PNG">
         </div>
 
         <div class="work col" id="hauntedhousegame6">
-          <img src="images/immersiveTechImg/GA_after1.PNG">
+          <img class="myImages" alt="Puzzle Room 1 - After Effects" src="images/immersiveTechImg/GA_after1.PNG">
         </div>
       </div>
 
       <div class="row" id="work-list">
         <div class="work col" id="hauntedhousegame7">
-          <img src="images/immersiveTechImg/GA_after2.PNG">
+          <img class="myImages" alt="Puzzle Room 2 - After Effects" src="images/immersiveTechImg/GA_after2.PNG">
         </div>
 
         <div class="work col" id="hauntedhousegame8">
-          <img src="images/immersiveTechImg/GA_after3.PNG">
+          <img class="myImages" alt="Puzzle Room 3 - After Effects" src="images/immersiveTechImg/GA_after3.PNG">
         </div>
 
         <div class="work col" id="hauntedhousegame9">
-          <img src="images/immersiveTechImg/GA_after4.PNG">
+          <img class="myImages" alt="Haunted House Entire Layout - After Effects" src="images/immersiveTechImg/GA_after4.PNG">
         </div>
       </div>
 
       <div class="row" id="work-list">
         <div class="work col" id="hauntedhousegame10">
-          <img src="images/immersiveTechImg/Panoramic Interior  Sketch Template.jpg">
+          <img class="myImages" alt="Panoramic Image Sketch of Game" src="images/immersiveTechImg/Panoramic Interior  Sketch Template.jpg">
         </div>
 
       </div>
@@ -516,6 +518,19 @@
 
   <!--Button-->
   <a href="#" onclick='window.open("Game Design Document Template.pdf");' download="Haunted House GDD - Lea Gabay" id="btnHref"><button type="submit" class="btn" id="submitBtn">Review Game Design Document(GDD)</button></a>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
 
   <!-- Footer -->
   <div class="container-fluid">
@@ -599,6 +614,8 @@
   <!--Reference to external JS file but the position of this code depends on where you want to place the code-->
   <script src="scripts/transitions.js"></script>
   <script src="scripts/commonPortfolioSub.js"></script>
+  <script src="scripts/modalImgs.js"></script>
+  
   <!--Take note that the external js file do not need the script tag-->
 
   <!--JS script or JS script libraries like fullPage.js and anime.js-->
