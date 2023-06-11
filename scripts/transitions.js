@@ -33,11 +33,18 @@ window.onload = () => {
     for (let i = 0; i < anchors.length; i++){
         const anchor = anchors[i];
         const hrefBtn = document.getElementById("btnHref");
+        const hrefBtn2 = document.getElementById("btnHref2");
         const contactBtn = document.getElementById("contactBtn");
         
         if(anchors[i] == hrefBtn){
 
             hrefBtn.addEventListener('click', function(){
+                window.location.reload;
+            })
+
+        } else if(anchors[i] == hrefBtn2){
+
+            hrefBtn2.addEventListener('click', function(){
                 window.location.reload;
             })
 
