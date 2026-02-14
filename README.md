@@ -230,7 +230,7 @@ Your site will be live at: `https://your-portfolio.netlify.app`
 
 Your site will be live at: `https://your-portfolio.vercel.app`
 ```
-
+```
 5. Enable GitHub Pages in repository settings:
    - Go to Settings → Pages
    - Source: Deploy from branch
@@ -301,3 +301,4 @@ MIT License - Feel free to use this template for your own portfolio!
 **Made with ❤️ using React and Vite**
 
 Good luck with your portfolio! 🚀
+```
