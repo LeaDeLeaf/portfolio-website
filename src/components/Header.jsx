@@ -17,7 +17,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <h1>YourName</h1>
+          <h1>Lea Gabay</h1>
         </Link>
 
         <button 

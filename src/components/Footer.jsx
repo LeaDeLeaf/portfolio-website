@@ -11,14 +11,11 @@ function Footer() {
           <div className="footer-section">
             <h3>Connect</h3>
             <div className="social-links">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/LeaDeLeaf" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/lea-gabay" target="_blank" rel="noopener noreferrer">
                 LinkedIn
-              </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                Twitter
               </a>
             </div>
           </div>
@@ -33,7 +30,7 @@ function Footer() {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Your Name. All rights reserved.</p>
+          <p>&copy; {currentYear} Lea Gabay. All rights reserved.</p>
         </div>
       </div>
     </footer>
