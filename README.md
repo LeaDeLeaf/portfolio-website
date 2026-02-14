@@ -179,4 +179,3 @@ MIT License - Feel free to use this template for your own portfolio!
 **Made with ❤️ using React and Vite**
 
 Good luck with your portfolio! 🚀
-```
