@@ -87,8 +87,6 @@ Edit `index.html`:
 
 Your contact form is ready to send real emails! 
 
-**Quick setup:** See [EMAILJS-SETUP.md](EMAILJS-SETUP.md) for detailed step-by-step instructions.
-
 **TL;DR:**
 1. Sign up at [emailjs.com](https://www.emailjs.com/) (free)
 2. Connect your email (Gmail, Outlook, etc.)
@@ -132,128 +130,6 @@ portfolio-website/
 ├── vite.config.js      # Vite configuration
 └── README.md           # This file
 ```
-
-## 🎯 What to Showcase in Your Portfolio
-
-### Essential Sections (Already Included):
-
-1. **Home/Hero Section**
-   - Brief introduction
-   - Your role/title
-   - Call-to-action buttons
-
-2. **About**
-   - Your background and story
-   - Skills and expertise
-   - What makes you unique
-
-3. **Projects**
-   - 3-6 of your best projects
-   - Include: description, tech stack, links to code and demo
-   - Focus on projects that solve real problems
-
-4. **Contact**
-   - Email
-   - Social media links
-   - Contact form (optional)
-
-### Recommended Content to Add:
-
-- **Resume/CV** - Add a downloadable PDF
-- **Blog** - Share your knowledge (optional)
-- **Testimonials** - If you have any
-- **Certifications** - Display relevant certificates
-
-## 🏗️ Build for Production
-
-```bash
-npm run build
-```
-
-This creates an optimized production build in the `dist/` folder.
-
-## 🌐 Deployment
-
-### Deploy to GitHub Pages
-
-1. **Setup EmailJS environment variables:**
-   
-   GitHub Pages doesn't support environment variables directly. You have two options:
-   
-   **Option A:** Create a `src/config.js` file (NOT recommended for public repos):
-   ```javascript
-   export const emailConfig = {
-     serviceId: 'your_service_id',
-     templateId: 'your_template_id',
-     publicKey: 'your_public_key'
-   }
-   ```
-   Then add `src/config.js` to `.gitignore`
-   
-   **Option B:** Use Vercel/Netlify instead (recommended - supports env variables)
-
-2. Install gh-pages:
-```bash
-npm install --save-dev gh-pages
-```
-
-2. Add to `package.json` scripts:
-```json
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-```
-
-3. Update `vite.config.js` base URL:
-```javascript
-base: '/portfolio-website/'  // Replace with your repo name
-```
-**Recommended for EmailJS setup!**
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-3. Import your repository
-4. **Add Environment Variables:**
-   - In Vercel dashboard, go to Settings → Environment Variables
-**Also great for EmailJS setup!**
-
-1. Push your code to GitHub
-2. Go to [netlify.com](https://netlify.com)
-3. "Add new site" → Import from Git
-4. Select your repository
-5. **Add Environment Variables:**
-   - In Site settings → Build & deploy → Environment
-   - Add your three `VITE_EMAILJS_*` variables
-6. Deploy
-
-Your site will be live at: `https://your-portfolio.netlify.app`
-5. Deploy (automatic!)
-
-Your site will be live at: `https://your-portfolio.vercel.app`
-```
-
-5. Enable GitHub Pages in repository settings:
-   - Go to Settings → Pages
-   - Source: Deploy from branch
-   - Branch: gh-pages
-   - Save
-
-Your site will be live at: `https://LeaDeLeaf.github.io/portfolio-website/`
-
-### Deploy to Vercel (Alternative)
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Deploy (automatic!)
-
-### Deploy to Netlify (Alternative)
-
-1. Push your code to GitHub
-2. Go to [netlify.com](https://netlify.com)
-3. "Add new site" → Import from Git
-4. Select your repository and deploy
 
 ## 🔒 Security Best Practices
 
