@@ -50,21 +50,27 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
 
-      // Send auto-reply to the person who filled out the form
+      // If main email sent successfully, show success
       if (result.text === 'OK') {
-        await emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID,
-          {
-            to_name: formData.name,
-            to_email: formData.email,
-            from_name: 'Lea Gabay', // Replace with your name
-          },
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-
         setStatus('success')
         setFormData({ name: '', email: '', message: '' })
+
+        // Try to send auto-reply (don't fail if this doesn't work)
+        try {
+          await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+            {
+              to_name: formData.name,
+              to_email: formData.email,
+              from_name: 'Lea Gabay', // Replace with your name
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          )
+        } catch (autoReplyError) {
+          // Auto-reply failed but main email worked, so still show success
+          console.log('Auto-reply failed, but main email sent:', autoReplyError)
+        }
       }
     } catch (error) {
       console.error('EmailJS Error:', error)
