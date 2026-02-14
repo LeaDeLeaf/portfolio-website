@@ -92,11 +92,11 @@ function Contact() {
           <h2>Contact Information</h2>
           <div className="info-item">
             <h3>Email</h3>
-            <p>your.email@example.com</p>
+            <p>lea101004@gmail.com</p>
           </div>
           <div className="info-item">
             <h3>Location</h3>
-            <p>Your City, Country</p>
+            <p>Singapore</p>
           </div>
           <div className="info-item">
             <h3>Social</h3>

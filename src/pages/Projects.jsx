@@ -16,7 +16,7 @@ function Projects() {
       title: 'Project Name 2',
       description: 'Brief description of your second project. Explain what problem it solves and what makes it unique.',
       technologies: ['React', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/yourusername/project2',
+      github: 'https://github.com/LeaDeLeaf/project2',
       demo: 'https://project2demo.com'
     },
     {
@@ -24,7 +24,7 @@ function Projects() {
       title: 'Project Name 3',
       description: 'Description of another project. Highlight the key features and technologies used.',
       technologies: ['JavaScript', 'HTML', 'CSS'],
-      github: 'https://github.com/yourusername/project3',
+      github: 'https://github.com/LeaDeLeaf/project3',
       demo: 'https://project3demo.com'
     }
   ]
