@@ -87,8 +87,6 @@ Edit `index.html`:
 
 Your contact form is ready to send real emails! 
 
-**Quick setup:** See [EMAILJS-SETUP.md](EMAILJS-SETUP.md) for detailed step-by-step instructions.
-
 **TL;DR:**
 1. Sign up at [emailjs.com](https://www.emailjs.com/) (free)
 2. Connect your email (Gmail, Outlook, etc.)
