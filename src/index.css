@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 :root {
-  /* Urban Chic Color Scheme */
+  /* Urban Chic Light Mode Colors */
   --primary-color: #22223B;
   --secondary-color: #4A4E69;
   --accent-color: #9A8C98;
@@ -16,17 +18,109 @@
   --bg-primary: #ffffff;
   --bg-secondary: #F2E9E4;
   --border-color: #C9ADA7;
+  --shadow: rgba(34, 34, 59, 0.1);
+  --shadow-hover: rgba(34, 34, 59, 0.2);
+}
+
+[data-theme='dark'] {
+  /* Urban Chic Dark Mode Colors */
+  --primary-color: #F2E9E4;
+  --secondary-color: #C9ADA7;
+  --accent-color: #9A8C98;
+  --light-accent: #4A4E69;
+  --lightest-gray: #22223B;
+  --text-primary: #F2E9E4;
+  --text-secondary: #C9ADA7;
+  --bg-primary: #161625;
+  --bg-secondary: #22223B;
+  --border-color: #4A4E69;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow-hover: rgba(0, 0, 0, 0.6);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--bg-primary);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(154, 140, 152, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(201, 173, 167, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Decorative background shapes */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    /* Top right circle */
+    radial-gradient(circle 300px at 85% 10%, rgba(154, 140, 152, 0.08), transparent),
+    /* Left blob */
+    radial-gradient(ellipse 400px 500px at 5% 40%, rgba(201, 173, 167, 0.06), transparent),
+    /* Bottom right shape */
+    radial-gradient(circle 350px at 90% 85%, rgba(154, 140, 152, 0.07), transparent),
+    /* Middle accent */
+    radial-gradient(ellipse 250px 400px at 50% 50%, rgba(242, 233, 228, 0.04), transparent);
+  pointer-events: none;
+  z-index: 0;
+  animation: shapeFloat 20s ease-in-out infinite;
+}
+
+@keyframes shapeFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  33% {
+    transform: translate(-10px, -15px) scale(1.02);
+    opacity: 0.9;
+  }
+  66% {
+    transform: translate(10px, -10px) scale(0.98);
+    opacity: 0.95;
+  }
+}
+
+[data-theme='dark'] body::after {
+  background-image:
+    /* Top right circle */
+    radial-gradient(circle 300px at 85% 10%, rgba(74, 78, 105, 0.1), transparent),
+    /* Left blob */
+    radial-gradient(ellipse 400px 500px at 5% 40%, rgba(154, 140, 152, 0.08), transparent),
+    /* Bottom right shape */
+    radial-gradient(circle 350px at 90% 85%, rgba(74, 78, 105, 0.09), transparent),
+    /* Middle accent */
+    radial-gradient(ellipse 250px 400px at 50% 50%, rgba(34, 34, 59, 0.06), transparent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
 }
 
 code {
@@ -38,6 +132,7 @@ code {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
 }
 
 a {

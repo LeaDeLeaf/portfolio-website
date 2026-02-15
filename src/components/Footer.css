@@ -1,7 +1,9 @@
 .footer {
-  background-color: var(--primary-color);
-  color: var(--lightest-gray);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
   margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
 }
 
 .footer-container {
@@ -18,9 +20,17 @@
 }
 
 .footer-section h3 {
-  color: white;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-section h3 i {
+  color: var(--accent-color);
 }
 
 .social-links,
@@ -32,23 +42,33 @@
 
 .social-links a,
 .quick-links a {
-  color: var(--light-accent);
+  color: var(--text-secondary);
   transition: color 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-links a i,
+.quick-links a i {
+  color: var(--accent-color);
+  font-size: 1.1rem;
 }
 
 .social-links a:hover,
 .quick-links a:hover {
-  color: white;
+  color: var(--accent-color);
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--secondary-color);
+  border-top: 1px solid var(--border-color);
   padding-top: 1.5rem;
   text-align: center;
 }
 
 .footer-bottom p {
-  color: var(--light-accent);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 

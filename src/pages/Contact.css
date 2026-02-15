@@ -11,7 +11,7 @@
 
 .contact-header h1 {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .contact-info h2 {
-  color: var(--primary-color);
+  color: var(--text-primary);
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
@@ -48,9 +48,10 @@
 }
 
 .info-item h3 {
-  color: var(--secondary-color);
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .info-item p {
@@ -70,14 +71,15 @@
 }
 
 .social a:hover {
-  color: var(--primary-color);
+  color: var(--text-primary);
 }
 
 .contact-form {
-  background-color: white;
+  background-color: var(--bg-secondary);
   padding: 2rem;
-  border: 2px solid var(--lightest-gray);
+  border: 2px solid var(--border-color);
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .form-group {
@@ -99,7 +101,9 @@
   border-radius: 6px;
   font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -122,20 +126,21 @@
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: white;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: var(--bg-primary);
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+  box-shadow: 0 4px 12px var(--shadow-hover);
+  opacity: 0.9;
 }
 
 .btn-primary:disabled {
-  background-color: var(--border-color);
+  background: var(--border-color);
   cursor: not-allowed;
   transform: none;
+  opacity: 0.6;
 }
 
 .form-status {

@@ -1,24 +1,74 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useTheme } from '../contexts/ThemeContext'
 import './Header.css'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const location = useLocation()
+  const { theme, toggleTheme } = useTheme()
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/contact', label: 'Contact' }
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' }
   ]
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const offset = 80 // Header height
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+    setMenuOpen(false)
+  }
 
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="logo">
+        <a 
+          href="#home" 
+          className="logo"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection('home')
+          }}
+        >
           <h1>Lea Gabay</h1>
-        </Link>
+        </a>
+
+        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+          {navItems.map(item => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="nav-link"
+              onClick={(e) => {
+                e.preventDefault()
+                scrollToSection(item.id)
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
+          <button 
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? (
+              <i className="fas fa-moon"></i>
+            ) : (
+              <i className="fas fa-sun"></i>
+            )}
+          </button>
+        </nav>
 
         <button 
           className={`menu-toggle ${menuOpen ? 'open' : ''}`}
@@ -29,19 +79,6 @@ function Header() {
           <span></span>
           <span></span>
         </button>
-
-        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-          {navItems.map(item => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
       </div>
     </header>
   )

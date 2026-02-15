@@ -11,7 +11,7 @@
 
 .about-header h1 {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -30,12 +30,13 @@
   background-color: var(--bg-secondary);
   padding: 2.5rem;
   border-radius: 10px;
-  border-left: 5px solid var(--primary-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--accent-color);
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: all 0.3s ease;
 }
 
 .about-card h2 {
-  color: var(--secondary-color);
+  color: var(--text-primary);
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
@@ -69,7 +70,7 @@
 }
 
 .what-i-do-list strong {
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: 600;
 }
 
