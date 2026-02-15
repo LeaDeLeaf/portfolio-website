@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import './Home.css'
+import profilePhoto from '../assets/profile.jpg'
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -110,7 +111,7 @@ function Home() {
           </div>
           <div className="hero-image">
             <div className="profile-photo">
-              <img src="/src/assets/profile.jpg" alt="Professional photo of Lea Gabay" />
+              <img src={profilePhoto} alt="Professional photo of Lea Gabay" />
             </div>
           </div>
         </div>
