@@ -225,7 +225,31 @@
   color: var(--bg-primary);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Shine effect for btn-primary */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: left 1s ease;
+  z-index: 1;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary i,
+.btn-primary span {
+  position: relative;
+  z-index: 2;
 }
 
 .btn-primary i {
@@ -233,24 +257,71 @@
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--shadow-hover);
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  transform: translateY(-2px) scale(1.05);
+  outline: 3px solid var(--secondary-color);
+  color: var(--bg-primary);
 }
 
-/* Animated arrow for View My Work button */
-.view-work-btn:hover i {
-  animation: arrowSlide 0.8s ease-in-out infinite;
+/* Custom arrow icon for View My Work button */
+.view-work-btn .arrow-icon {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 16px;
+  margin-left: 0.7rem;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 2;
 }
 
-@keyframes arrowSlide {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(6px);
-  }
+/* Arrow shaft (line) */
+.view-work-btn .arrow-icon::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--bg-primary);
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Arrow head (triangle) */
+.view-work-btn .arrow-icon::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid var(--bg-primary);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+}
+
+.view-work-btn:hover {
+  padding-right: 4rem;
+}
+
+.view-work-btn:hover .arrow-icon {
+  transform: translateX(18px) translateY(-1px);
+  width: 38px;
+}
+
+.view-work-btn:hover .arrow-icon::before {
+  width: 28px;
+}
+
+.view-work-btn:hover .arrow-icon::after {
+  border-left-width: 10px;
+  border-top-width: 8px;
+  border-bottom-width: 8px;
 }
 
 .btn-secondary {
@@ -260,12 +331,9 @@
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--shadow-hover);
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  transform: translateY(-2px) scale(1.05);
 }
 
 .skills {
@@ -812,23 +880,53 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine effect for project-link */
+.project-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: left 1s ease;
+  z-index: 1;
+}
+
+.project-link:hover::before {
+  left: 100%;
+}
+
+.project-link i,
+.project-link span {
+  position: relative;
+  z-index: 2;
 }
 
 .project-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--shadow-hover);
-  opacity: 0.9;
+  border-color: var(--secondary-color);
+  color: var(--bg-primary);
+  transform: scale(1.05);
 }
 
-.project-link.demo {
-  background: transparent;
+.project-link.demo {  background: transparent;
   color: var(--text-primary);
   border: 2px solid var(--border-color);
 }
 
+.project-link.demo::before {
+  display: none;
+}
+
 .project-link.demo:hover {
-  background-color: var(--bg-secondary);
-  border-color: var(--accent-color);
+  border-color: var(--secondary-color);
+  color: var(--text-primary);
+  transform: scale(1.05);
 }
 
 .projects-cta {

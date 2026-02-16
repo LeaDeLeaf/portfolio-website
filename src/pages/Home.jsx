@@ -90,19 +90,19 @@ function Home() {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Hi, I'm <span className="highlight">Lea Gabay</span>
+              <span className="highlight">Lea Gabay</span>
             </h1>
             <p className="hero-subtitle">
-              <i className="fas fa-code"></i> Full Stack Developer | 
-              <i className="fas fa-lightbulb"></i> Problem Solver | 
-              <i className="fas fa-laptop-code"></i> Tech Enthusiast
+              <i className="fas fa-laptop-code"></i> Computer Science Student |
+              <i className="fas fa-code"></i> Aspiring Full Stack Developer 
             </p>
             <p className="hero-description">
-              I build innovative web applications and love turning complex problems into simple, beautiful solutions.
+              I create innovative web applications and enjoy turning complex coding challenges into simple, elegant solutions. 
+              Passionate about learning, problem-solving, and building projects that make a difference.
             </p>
             <div className="hero-buttons">
               <a href="#projects" className="btn btn-primary view-work-btn">
-                <i className="fas fa-briefcase"></i> View My Work
+                View My Projects <span className="arrow-icon"></span>
               </a>
               <a href="#contact" className="btn btn-secondary">
                 <i className="fas fa-envelope"></i> Get in Touch
