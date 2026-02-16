@@ -10,13 +10,3 @@
   position: relative;
   z-index: 1;
 }
-
-section {
-  scroll-margin-top: 80px; /* Account for fixed header */
-}
-
-@media (max-width: 768px) {
-  section {
-    scroll-margin-top: 70px;
-  }
-}

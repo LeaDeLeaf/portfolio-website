@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
 import './Header.css'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
   const { theme, toggleTheme } = useTheme()
 
   const navItems = [
@@ -14,15 +15,34 @@ function Header() {
     { id: 'contact', label: 'Contact' }
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => ({
+        id: item.id,
+        element: document.getElementById(item.id)
+      }))
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i]
+        if (section.element && section.element.offsetTop <= scrollPosition) {
+          setActiveSection(section.id)
+          break
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Call once on mount
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      const offset = 80 // Header height
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - offset
-
       window.scrollTo({
-        top: offsetPosition,
+        top: element.offsetTop,
         behavior: 'smooth'
       })
     }
@@ -48,7 +68,7 @@ function Header() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="nav-link"
+              className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
               onClick={(e) => {
                 e.preventDefault()
                 scrollToSection(item.id)

@@ -115,6 +115,10 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="scroll-indicator">
+          <span className="scroll-text">Scroll to explore</span>
+          <i className="fas fa-chevron-down scroll-arrow"></i>
+        </div>
       </section>
 
       {/* About Section */}
