@@ -63,8 +63,8 @@ body::before {
   height: 500px;
   background: radial-gradient(
     circle,
-    rgba(154, 140, 152, 0.25) 0%,
-    rgba(201, 173, 167, 0.18) 40%,
+    rgba(154, 140, 152, 0.35) 0%,
+    rgba(201, 173, 167, 0.25) 40%,
     transparent 70%
   );
   border-radius: 50%;
@@ -96,8 +96,8 @@ body::after {
   height: 600px;
   background: radial-gradient(
     ellipse,
-    rgba(201, 173, 167, 0.22) 0%,
-    rgba(154, 140, 152, 0.14) 50%,
+    rgba(201, 173, 167, 0.32) 0%,
+    rgba(154, 140, 152, 0.2) 50%,
     transparent 75%
   );
   border-radius: 40% 60% 50% 50%;

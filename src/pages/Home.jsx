@@ -11,6 +11,17 @@ function Home() {
   })
   const [status, setStatus] = useState('')
   const [loading, setLoading] = useState(false)
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
+
+  // Cursor follower effect
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPos({ x: e.clientX, y: e.clientY })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
   // Intersection Observer for section fade-in animations
   useEffect(() => {
@@ -114,6 +125,22 @@ function Home() {
 
   return (
     <div className="home">
+      {/* Cursor Follower */}
+      <div 
+        className="cursor-follower"
+        style={{
+          left: `${cursorPos.x}px`,
+          top: `${cursorPos.y}px`
+        }}
+      ></div>
+      <div 
+        className="cursor-follower-outer"
+        style={{
+          left: `${cursorPos.x}px`,
+          top: `${cursorPos.y}px`
+        }}
+      ></div>
+
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">

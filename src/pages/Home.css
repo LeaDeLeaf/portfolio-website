@@ -5,6 +5,63 @@
   overflow: hidden;
 }
 
+/* Cursor Follower */
+.cursor-follower {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(154, 140, 152, 0.7) 0%,
+    rgba(201, 173, 167, 0.4) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+  mix-blend-mode: multiply;
+  filter: blur(8px);
+}
+
+.cursor-follower-outer {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(154, 140, 152, 0.35) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: transform 0.2s ease-out;
+  mix-blend-mode: multiply;
+  filter: blur(15px);
+}
+
+[data-theme='dark'] .cursor-follower {
+  background: radial-gradient(
+    circle,
+    rgba(154, 140, 152, 0.6) 0%,
+    rgba(201, 173, 167, 0.3) 50%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+}
+
+[data-theme='dark'] .cursor-follower-outer {
+  background: radial-gradient(
+    circle,
+    rgba(154, 140, 152, 0.25) 0%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+}
+
 /* Floating decorative shapes - Middle accent */
 .home::before {
   content: '';
@@ -15,8 +72,8 @@
   right: 15%;
   background: radial-gradient(
     circle,
-    rgba(154, 140, 152, 0.2) 0%,
-    rgba(201, 173, 167, 0.12) 50%,
+    rgba(154, 140, 152, 0.3) 0%,
+    rgba(201, 173, 167, 0.18) 50%,
     transparent 70%
   );
   border-radius: 60% 40% 50% 50%;
@@ -35,8 +92,8 @@
   left: 10%;
   background: radial-gradient(
     ellipse,
-    rgba(201, 173, 167, 0.24) 0%,
-    rgba(154, 140, 152, 0.14) 60%,
+    rgba(201, 173, 167, 0.35) 0%,
+    rgba(154, 140, 152, 0.2) 60%,
     transparent 80%
   );
   border-radius: 50% 50% 40% 60%;
