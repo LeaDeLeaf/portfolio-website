@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import './Home.css'
 import profilePhoto from '../assets/profile.jpg'
@@ -11,6 +11,35 @@ function Home() {
   })
   const [status, setStatus] = useState('')
   const [loading, setLoading] = useState(false)
+
+  // Intersection Observer for section fade-in animations
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    }
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible')
+        } else {
+          entry.target.classList.remove('section-visible')
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    // Observe all sections except hero (which is always visible)
+    const sections = document.querySelectorAll('section:not(.hero)')
+    sections.forEach(section => observer.observe(section))
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section))
+    }
+  }, [])
 
   const projects = [
     {
