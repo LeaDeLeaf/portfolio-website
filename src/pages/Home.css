@@ -708,6 +708,13 @@ section.section-visible {
   border-color: var(--bg-primary);
 }
 
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+}
+
 @media (max-width: 968px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -1338,41 +1345,20 @@ section.section-visible {
   justify-content: center;
 }
 
-.projects-section::before {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 2px solid rgba(154, 140, 152, 0.1);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  top: 20%;
-  left: 3%;
-  z-index: 0;
-  transform: rotate(15deg);
-  animation: rotateSlow 25s linear infinite;
-}
-
-@keyframes rotateSlow {
-  0% {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(375deg);
-  }
-}
-
-[data-theme='dark'] .projects-section::before {
-  border-color: rgba(74, 78, 105, 0.15);
-}
-
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto 3rem;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 1401px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .project-card {
@@ -1444,6 +1430,7 @@ section.section-visible {
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .project-link {
@@ -1462,6 +1449,8 @@ section.section-visible {
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Shine effect for project-link */
@@ -1474,17 +1463,12 @@ section.section-visible {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
   transition: left 1s ease;
-  z-index: 1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .project-link:hover::before {
   left: 100%;
-}
-
-.project-link i,
-.project-link span {
-  position: relative;
-  z-index: 2;
 }
 
 .project-link:hover {
@@ -1828,6 +1812,11 @@ section.section-visible {
   .hero-content {
     gap: 2rem;
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1867,9 +1856,10 @@ section.section-visible {
   .strengths-grid {
     grid-template-columns: 1fr;
   }
-  
-  .projects-grid {
+
+  .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .contact-form {

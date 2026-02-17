@@ -73,7 +73,6 @@ function Home() {
       id: 3,
       title: 'Project Name 3',
       description: 'Clean JavaScript project with key features.',
-
       technologies: ['JavaScript', 'HTML', 'CSS'],
       github: 'https://github.com/LeaDeLeaf/project3',
       demo: 'https://project3demo.com'
