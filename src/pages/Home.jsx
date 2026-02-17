@@ -188,17 +188,16 @@ function Home() {
         <div className="about-content">
           <div className="about-main">
             <p>
-              I'm a <strong>passionate developer</strong> who loves creating <strong>meaningful digital experiences</strong>. 
-              My focus is on building <strong>innovative solutions</strong> with modern technologies while 
-              maintaining <strong>clean, maintainable code</strong> that scales.
+              I'm a passionate <strong>Computing Science student</strong> and <strong>aspiring Full Stack Developer</strong> who loves creating <strong>meaningful digital experiences</strong>. 
+              I focus on building <strong>innovative solutions</strong> with <strong>modern technologies</strong>, writing <strong>clean, maintainable code</strong>, and designing applications that can <strong>scale</strong>.
             </p>
             <p>
-              From frontend to backend, I enjoy the entire development process — <strong>solving complex problems</strong>, 
-              optimizing performance, and delivering <strong>user-friendly applications</strong> that make a real impact.
+              From frontend to backend, I enjoy the <strong>full development process</strong> — <strong>tackling complex challenges</strong>, 
+              <strong>optimizing performance</strong>, and delivering <strong>user-friendly applications</strong> that have <strong>real-world impact</strong>.
             </p>
             <p>
-              When I'm not coding, I'm <strong>exploring new technologies</strong>, contributing to <strong>open-source projects</strong>, 
-              and sharing knowledge with the <strong>developer community</strong>.
+              Outside of coding, I explore <strong>emerging technologies</strong>, take on <strong>different projects </strong> 
+              to build and create, constantly pushing myself to keep <strong>learning and growing every day</strong>.
             </p>
           </div>
 
