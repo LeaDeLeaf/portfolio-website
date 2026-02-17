@@ -149,8 +149,9 @@ function Home() {
               <span className="highlight">Lea Gabay</span>
             </h1>
             <p className="hero-subtitle">
-              <i className="fas fa-laptop-code"></i> Computer Science Student |
-              <i className="fas fa-code"></i> Aspiring Full Stack Developer 
+              <span className="role"><i className="fas fa-laptop-code"></i> Computer Science Student</span>
+              <span className="separator"> | </span>
+              <span className="role"><i className="fas fa-code"></i> Aspiring Full Stack Developer</span>
             </p>
             <p className="hero-description">
               I create innovative web applications and enjoy turning complex coding challenges into simple, elegant solutions. 
