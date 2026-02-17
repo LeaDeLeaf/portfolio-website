@@ -25,6 +25,13 @@
   filter: blur(8px);
 }
 
+@media (max-width: 768px) {
+  .cursor-follower,
+  .cursor-follower-outer {
+    display: none;
+  }
+}
+
 .cursor-follower-outer {
   position: fixed;
   width: 50px;
@@ -163,7 +170,9 @@ section.section-visible {
   margin-bottom: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
@@ -349,11 +358,8 @@ section.section-visible {
 
 /* Scroll Indicator */
 .scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  position: relative;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,6 +369,7 @@ section.section-visible {
   animation: fadeInUp 1s ease-out 1.5s both;
   text-align: center;
   width: fit-content;
+  transition: all 0.3s ease;
 }
 
 .scroll-text {
@@ -575,7 +582,7 @@ section.section-visible {
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
@@ -718,12 +725,16 @@ section.section-visible {
   .hero-subtitle {
     font-size: 1.1rem;
   }
+
+  .hero {
+    padding: 6rem 2rem 4rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem;
-    min-height: auto;
+    padding: 5rem 1.5rem 3rem;
+    min-height: 100vh;
   }
 
   .hero-title {
@@ -739,8 +750,8 @@ section.section-visible {
   }
 
   .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 280px;
   }
 
   .skills h2 {
@@ -759,22 +770,52 @@ section.section-visible {
   .cta p {
     font-size: 1.1rem;
   }
-  
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4.5rem 1rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
   .profile-photo {
-    width: 280px;
-    height: 330px;
+    width: 200px;
+    height: 240px;
   }
 
-  .scroll-indicator {
-    bottom: 6rem;
+  .section-title {
+    font-size: 1.75rem;
   }
 
-  .scroll-text {
-    font-size: 0.75rem;
+  .section-subtitle {
+    font-size: 0.95rem;
   }
 
-  .scroll-arrow {
-    font-size: 1rem;
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -927,7 +968,7 @@ section.section-visible {
   background: var(--bg-secondary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
 }
 
@@ -1009,7 +1050,7 @@ section.section-visible {
   border: 2px solid var(--border-color);
   border-radius: 16px;
   padding: 2rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
 }
@@ -1054,7 +1095,7 @@ section.section-visible {
   font-size: 0.85rem;
   font-weight: 500;
   border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -1203,6 +1244,11 @@ section.section-visible {
   border-radius: 16px;
   height: fit-content;
   border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+  box-shadow: 0 8px 24px var(--shadow-hover);
 }
 
 .contact-info h3 {
@@ -1223,6 +1269,11 @@ section.section-visible {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
 }
 
 .info-item:last-child {
@@ -1256,7 +1307,7 @@ section.section-visible {
 
 .social a {
   color: var(--text-secondary);
-  transition: color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1266,10 +1317,16 @@ section.section-visible {
 .social a i {
   color: var(--accent-color);
   font-size: 1.1rem;
+  transition: transform 0.3s ease;
 }
 
 .social a:hover {
   color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.social a:hover i {
+  transform: scale(1.2);
 }
 
 .contact-form {
@@ -1278,6 +1335,10 @@ section.section-visible {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0 8px 24px var(--shadow-hover);
 }
 
 .form-group {
@@ -1305,7 +1366,7 @@ section.section-visible {
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -1314,6 +1375,8 @@ section.section-visible {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-hover);
 }
 
 .form-group textarea {
@@ -1363,24 +1426,25 @@ section.section-visible {
   }
   
   .strengths-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .contact-container {
     grid-template-columns: 1fr;
   }
+
+  .hero-content {
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .profile-photo {
-    width: 260px;
-    height: 310px;
-  }
-  
   .about-section,
   .projects-section,
-  .contact-section {
-    padding: 3rem 1.5rem;
+  .contact-section,
+  .skills {
+    padding: 4rem 1.5rem;
+    min-height: auto;
   }
   
   .section-title {
@@ -1410,5 +1474,53 @@ section.section-visible {
   
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section,
+  .projects-section,
+  .contact-section,
+  .skills {
+    padding: 3rem 1rem;
+  }
+
+  .about-main {
+    font-size: 1rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
   }
 }

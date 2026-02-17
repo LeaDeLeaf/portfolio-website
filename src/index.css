@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 :root {
   /* Urban Chic Light Mode Colors */
   --primary-color: #22223B;
@@ -151,7 +163,13 @@ code {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Account for fixed header */
+  scroll-padding-top: 100px;
+}
+
+@media (max-width: 968px) {
+  html {
+    scroll-padding-top: 80px;
+  }
 }
 
 a {
@@ -169,4 +187,33 @@ button {
   border: none;
   outline: none;
   font-family: inherit;
+}
+
+/* Responsive background blobs */
+@media (max-width: 768px) {
+  body::before {
+    width: 350px;
+    height: 350px;
+    top: -5%;
+    right: -10%;
+  }
+
+  body::after {
+    width: 400px;
+    height: 400px;
+    bottom: -10%;
+    left: -15%;
+  }
+}
+
+@media (max-width: 480px) {
+  body::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  body::after {
+    width: 300px;
+    height: 300px;
+  }
 }

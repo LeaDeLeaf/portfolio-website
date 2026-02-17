@@ -38,6 +38,18 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuOpen && !e.target.closest('.nav') && !e.target.closest('.menu-toggle')) {
+        setMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [menuOpen])
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -78,7 +90,7 @@ function Header() {
             </a>
           ))}
           <button 
-            className="theme-toggle"
+            className="theme-toggle desktop-theme-toggle"
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
@@ -90,15 +102,28 @@ function Header() {
           </button>
         </nav>
 
-        <button 
-          className={`menu-toggle ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="mobile-controls">
+          <button 
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? (
+              <i className="fas fa-moon"></i>
+            ) : (
+              <i className="fas fa-sun"></i>
+            )}
+          </button>
+          <button 
+            className={`menu-toggle ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
   )
