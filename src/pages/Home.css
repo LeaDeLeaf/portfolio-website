@@ -1307,6 +1307,8 @@ section.section-visible {
   border: 1px solid var(--border-color);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .strength-badge:hover {
@@ -1744,7 +1746,77 @@ section.section-visible {
   color: var(--accent-color);
 }
 
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes borderRotate {
+  0% {
+    --border-angle: 0deg;
+  }
+  100% {
+    --border-angle: 360deg;
+  }
+}
+
 /* Responsive Updates */
+@media (max-width: 1024px) {
+  .strength-badge,
+  .skill-card {
+    isolation: isolate;
+    border: 3px solid transparent;
+  }
+
+  .strength-badge::before,
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(
+      from var(--border-angle, 0deg),
+      transparent 0deg,
+      transparent 255deg,
+      var(--accent-color) 285deg,
+      var(--light-accent) 330deg,
+      var(--secondary-color) 360deg
+    );
+    animation: borderRotate 3.5s linear infinite;
+    transition: none;
+    transform: none;
+    transform-origin: center;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent-color) 82%, white 18%));
+  }
+
+  .strength-badge::after,
+  .skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: inherit;
+    background: var(--bg-secondary);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .strength-badge > *,
+  .skill-card > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .strength-badge:hover::before,
+  .skill-card:hover::before {
+    transform: none;
+  }
+}
+
 @media (max-width: 968px) {
   .profile-photo {
     width: 320px;
