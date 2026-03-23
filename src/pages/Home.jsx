@@ -59,7 +59,7 @@ function Home() {
       description: 'A sleek and modern portfolio website showcasing my projects, skills, and web development work.',
       technologies: ['React', 'Vite', 'CSS'],
       github: 'https://github.com/LeaDeLeaf/portfolio-website',
-      demo: 'https://portfolio-website-omega-ebon-77.vercel.app'
+      demo: ''
     },
     {
       id: 2,
@@ -75,7 +75,7 @@ function Home() {
       description: 'A gaming-themed web platform featuring game listings, user interactions, and a modern UI experience.',
       technologies: ['JavaScript', 'Typescript'],
       github: 'https://github.com/alicia112233/INF2003-DatabaseSystemsProject',
-      demo: 'https://db-project-neon.vercel.app/'
+      demo: ''
     }
   ]
 
