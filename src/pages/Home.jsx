@@ -269,9 +269,9 @@ function Home() {
       {/* Projects Section */}
       <section id="projects" className="projects-section">
         <h2 className="section-title">
-          <i className="fas fa-folder-open"></i> My Projects
+          <i className="fas fa-folder-open"></i> Featured Works
         </h2>
-        <p className="section-subtitle">Here are some of my recent works and personal projects</p>
+        <p className="section-subtitle">Here are some of my past works done in a team setting and personal projects</p>
 
         <div className="projects-grid">
           {projects.map(project => {
