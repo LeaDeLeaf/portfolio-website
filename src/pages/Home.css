@@ -1492,6 +1492,18 @@ section.section-visible {
   transform: scale(1.05);
 }
 
+.project-link.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.project-link.demo.disabled:hover {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  transform: none;
+}
+
 .projects-cta {
   text-align: center;
   padding: 2rem;

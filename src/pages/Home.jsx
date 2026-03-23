@@ -56,26 +56,26 @@ function Home() {
     {
       id: 1,
       title: 'Portfolio Website',
-      description: 'Modern portfolio with dark mode and responsive design.',
+      description: 'A sleek and modern portfolio website showcasing my projects, skills, and web development work.',
       technologies: ['React', 'Vite', 'CSS'],
       github: 'https://github.com/LeaDeLeaf/portfolio-website',
-      demo: 'https://yourportfolio.com'
+      demo: 'https://portfolio-website-omega-ebon-77.vercel.app'
     },
     {
       id: 2,
-      title: 'Project Name 2',
-      description: 'Full-stack web app solving real problems.',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/LeaDeLeaf/project2',
-      demo: 'https://project2demo.com'
+      title: 'Pet Transport Booking System',
+      description: 'A PHP-based booking system for pet transport services bookings and managements.',
+      technologies: ['PHP', 'CSS', 'JavaScript'],
+      github: 'https://github.com/Jeniffer1976/Pet-Transport-Booking-System',
+      demo: ''
     },
     {
       id: 3,
-      title: 'Project Name 3',
-      description: 'Clean JavaScript project with key features.',
-      technologies: ['JavaScript', 'HTML', 'CSS'],
-      github: 'https://github.com/LeaDeLeaf/project3',
-      demo: 'https://project3demo.com'
+      title: 'Game Haven',
+      description: 'A gaming-themed web platform featuring game listings, user interactions, and a modern UI experience.',
+      technologies: ['JavaScript', 'Typescript'],
+      github: 'https://github.com/alicia112233/INF2003-DatabaseSystemsProject',
+      demo: 'https://db-project-neon.vercel.app/'
     }
   ]
 
@@ -241,22 +241,27 @@ function Home() {
           <div className="skill-card">
             <div className="skill-icon"><i className="fas fa-laptop-code"></i></div>
             <h3>Frontend</h3>
-            <p>React, JavaScript, HTML, CSS, Responsive Design</p>
+            <p>HTML, CSS, JavaScript, React, Responsive Design</p>
           </div>
           <div className="skill-card">
             <div className="skill-icon"><i className="fas fa-server"></i></div>
             <h3>Backend</h3>
-            <p>Node.js, Express, REST APIs, Database Design</p>
+            <p>Python, REST API, MySQL, MongoDB, Database Design</p>
           </div>
           <div className="skill-card">
             <div className="skill-icon"><i className="fas fa-tools"></i></div>
-            <h3>Tools</h3>
-            <p>Git, GitHub, VS Code, Vite, npm</p>
+            <h3>Tools & DevOps</h3>
+            <p>Git, GitHub, Docker, VS Code, npm</p>
           </div>
           <div className="skill-card">
-            <div className="skill-icon"><i className="fas fa-star"></i></div>
-            <h3>Other</h3>
-            <p>Problem Solving, Team Collaboration, Agile</p>
+            <div className="skill-icon"><i className="fas fa-palette"></i></div>
+            <h3>Design & Creative</h3>
+            <p>Adobe XD, Illustrator, Canva, Microsoft Office</p>
+          </div>
+          <div className="skill-card">
+            <div className="skill-icon"><i className="fas fa-tasks"></i></div>
+            <h3>Other Skills</h3>
+            <p>Agile, Problem Solving, Team Collaboration</p>
           </div>
         </div>
       </section>
@@ -269,42 +274,52 @@ function Home() {
         <p className="section-subtitle">Here are some of my recent works and personal projects</p>
 
         <div className="projects-grid">
-          {projects.map(project => (
-            <div key={project.id} className="project-card">
-              <div className="project-icon">
-                <i className="fas fa-code"></i>
-              </div>
-              <h3>{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              
-              <div className="technologies">
-                {project.technologies.map(tech => (
-                  <span key={tech} className="tech-tag">
-                    <i className="fas fa-tag"></i> {tech}
-                  </span>
-                ))}
-              </div>
+          {projects.map(project => {
+            const hasDemo = typeof project.demo === 'string' && project.demo.trim() !== ''
 
-              <div className="project-links">
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  <i className="fab fa-github"></i> View Code
-                </a>
-                <a 
-                  href={project.demo} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link demo"
-                >
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
+            return (
+              <div key={project.id} className="project-card">
+                <div className="project-icon">
+                  <i className="fas fa-code"></i>
+                </div>
+                <h3>{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+
+                <div className="technologies">
+                  {project.technologies.map(tech => (
+                    <span key={tech} className="tech-tag">
+                      <i className="fas fa-tag"></i> {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="project-links">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    <i className="fab fa-github"></i> View Code
+                  </a>
+                  {hasDemo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link demo"
+                    >
+                      <i className="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                  ) : (
+                    <span className="project-link demo disabled" aria-disabled="true">
+                      <i className="fas fa-external-link-alt"></i> Live Demo
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className="projects-cta">
